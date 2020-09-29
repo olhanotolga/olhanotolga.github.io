@@ -8,13 +8,16 @@
 	line-height: $ln-height;
 	font-family: inherit;
 	font-size: $fnt-size;
+	transition: 0.3s;
 }
 // Mixin for inputs only (incl. <texatarea>)
 @mixin only-inputs {
+	border: 2px solid $accent-color--skills;
+
 	&::placeholder {
 		color: $dimmed-color;
-		color: $main-light-color;
-		color: $accent-color--contact;
+		// color: $main-light-color;
+		// color: $accent-color--contact;
 		// color: $outline-color;
 	}
 	&:active,
@@ -25,8 +28,10 @@
 		}
 	}
 	&:not(:placeholder-shown) {
-		background-color: $accent-color--projects;
 		background-color: $accent-color--skills;
+		background-color: $accent-color--projects;
+		border: 2px solid $accent-color--projects;
+		color: $accent-color--contact;
 	}
 }
 
@@ -50,11 +55,15 @@
 		}
 
 		input {
-			@include form-part($accent-color--projects, 2, 1.6rem);
+			// @include form-part($accent-color--projects, 2, 1.6rem);
+			// @include form-part($accent-color--skills, 2, 1.6rem);
+			@include form-part($main-light-color, 2, 1.6rem);
 			@include only-inputs;
 		}
 		textarea {
-			@include form-part($accent-color--projects, 1, 1.6rem);
+			// @include form-part($accent-color--projects, 1, 1.6rem);
+			// @include form-part($accent-color--skills, 1, 1.6rem);
+			@include form-part($main-light-color, 1, 1.6rem);
 			@include only-inputs;
 		}
 		button {
@@ -77,9 +86,13 @@ textarea:-webkit-autofill:active,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-	-webkit-text-fill-color: $main-dark-color;
-	-webkit-box-shadow: 0 0 0px 30px $accent-color--skills inset;
-	box-shadow: 0 0 0px 30px $accent-color--skills inset;
+	// -webkit-text-fill-color: $main-dark-color;
+	// -webkit-box-shadow: 0 0 0px 30px $accent-color--projects inset;
+	// box-shadow: 0 0 0px 30px $accent-color--projects inset;
+	-webkit-text-fill-color: $accent-color--contact;
+	-webkit-box-shadow: 0 0 0px 30px $accent-color--projects inset;
+	box-shadow: 0 0 0px 30px $accent-color--projects inset;
+	
 }
 
 .social-links {
