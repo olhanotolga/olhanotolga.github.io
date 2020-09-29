@@ -3,6 +3,42 @@
 }
 
 .about-info {
-	margin-left: 2rem;
-	border-left: 3px solid $accent-color--projects;
+	margin: 0 auto;
+	position: relative;
+	display: grid;
+	grid-template: repeat(6, auto) / auto auto 1fr; // on 600+ px
+	grid-template: repeat(6, auto) / calc(7ch + 3rem) auto 1fr; // on mobile
+
+	&-intro {
+		grid-area: span 1 / span 3;
+	}
+	&-date {
+		color: $support-color;
+		font-weight: 900;
+	}
+	&-paragraph {
+		grid-column: 3 / span 1;
+
+		&::before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			width: 2rem;
+			height: 2rem;
+			background-color: $accent-color--contact;
+			border-radius: 50%;
+			left: calc(11ch + 4.5rem); // on 600+ px
+			left: calc(7ch + 2.5rem); // on mobile
+		}
+	}
+
+	&::before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		width: 1rem;
+		height: 100%;
+		background-color: $accent-color--projects;
+		grid-area: 2 / 2 / span 5 / span 1;
+	}
 }
