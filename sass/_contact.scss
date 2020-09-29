@@ -1,16 +1,21 @@
 // Mixin for the form inputs and the button
-@mixin form-part($bg-color, $ln-height) {
+@mixin form-part($bg-color, $ln-height, $fnt-size) {
 	background-color: $bg-color;
+	padding: 0.5rem;
+	border: none;
+	border-radius: $border-radius-small;
+	box-shadow: none;
 	line-height: $ln-height;
 	font-family: inherit;
-	font-size: 1.6rem;
-	padding: 0.5rem;
+	font-size: $fnt-size;
 }
 // Mixin for inputs only (incl. <texatarea>)
 @mixin only-inputs {
 	&::placeholder {
 		color: $dimmed-color;
 		color: $main-light-color;
+		color: $accent-color--contact;
+		// color: $outline-color;
 	}
 	&:active,
 	&:focus {
@@ -45,17 +50,15 @@
 		}
 
 		input {
-			@include form-part($accent-color--skills, 2);
-			@include form-part($accent-color--projects, 2);
+			@include form-part($accent-color--projects, 2, 1.6rem);
 			@include only-inputs;
 		}
 		textarea {
-			@include form-part($accent-color--skills, 1);
-			@include form-part($accent-color--projects, 1);
+			@include form-part($accent-color--projects, 1, 1.6rem);
 			@include only-inputs;
 		}
 		button {
-			@include form-part($accent-color--about, 2);
+			@include form-part($accent-color--about, 2, 1.8rem);
 			text-transform: uppercase;
 		}
 	}
@@ -91,3 +94,4 @@ select:-webkit-autofill:focus {
 		width: 100%;
 	}
 }
+

@@ -1,3 +1,8 @@
 #about-page .section-header {
 	background-color: $accent-color--about;
 }
+
+.about-info {
+	margin-left: 2rem;
+	border-left: 3px solid $accent-color--projects;
+}
