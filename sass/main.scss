@@ -1,0 +1,38 @@
+@import "reset",
+"functional",
+"variables",
+"homepage",
+"about",
+"skills",
+"projects",
+"contact";
+
+body {
+	background-color: $main-dark-color;
+	color: $main-light-color;
+}
+
+section.page {
+	min-height: 100vh;
+	padding-bottom: 3rem;
+	display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+.section-header {
+	width: 90%;
+	margin: 2rem auto;
+	transform: skewX(-20deg);
+}
+h2 {
+	padding: 2rem 3rem;
+	font-size: 3rem;
+	text-transform: uppercase;
+	transform: skewX(20deg);
+}
+p {
+	padding: 1rem 3rem;
+}
+
+*:focus {
+	outline: 2px solid $dimmed-color;
+}

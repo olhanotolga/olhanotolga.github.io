@@ -1,0 +1,22 @@
+:root {
+	font-size: 62.5%;
+}
+*,
+::after,
+::before,
+ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 1.8rem;
+    font-family: sans-serif;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: unset;
+}

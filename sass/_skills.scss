@@ -1,0 +1,102 @@
+#skills-page {
+	.section-header {
+		background-color: $accent-color--skills;
+	}
+
+	section {
+		margin: auto 2rem;
+
+		h3 {
+			text-align: center;
+		}
+	}
+}
+
+.web-dev {
+	// background-color: $main-light-color;
+	// color: $main-dark-color;
+	
+	&-skills {
+		padding: 2rem;
+		display: grid;
+		grid-template: repeat(5, 15vw) /repeat(5, minmax(12vw, 1fr));
+		align-items: center;
+		justify-items: center;
+		gap: 1rem;
+		
+		.html {
+			grid-area: 2 / 3 / span 2 / 4;
+		}
+		.css {
+			grid-area: 2 / 4 / span 2 / 5;
+		}
+		.bootstrap {
+			grid-area: 1 / 3 / span 1 / 4;
+		}
+		.sass {
+			grid-area: 2 / 5 / span 1 / -1;
+		}
+		.javascript {
+			grid-area: 2 / 2 / span 2 / 3;
+		}
+		.jquery {
+			grid-area: 2 / 1 / span 1 / 2;
+		}
+		.react {
+			grid-area: 3 / 1 / span 1 / 2;
+		}
+		.python {
+			grid-area: 4 / 2 / span 1 / 3;
+		}
+		.flask {
+			grid-area: 5 / 2 / span 1 / 3;
+
+			.web-dev-skill-icon {
+				max-width: 9vw;
+			}
+		}
+		.git {
+			grid-area: 4 / 4 / span 1 / 5;
+		}
+		.github {
+			grid-area: 5 / 4 / span 1 / 5;
+		}
+		.cli {
+			grid-area: 4 / 5 / span 1 / -1;
+		}
+	}
+	
+	&-skill {
+		border: 1px solid $main-dark-color;
+		border-radius: 1rem;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $main-light-color;
+		
+		&-icon {
+			max-width: 11vw;
+			object-fit: cover;
+		}
+	}
+
+	
+}
+
+.other {
+	&-skills {
+		padding: 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&-skill {
+		width: 15vw;
+
+		&-icon {
+			width: 80%;
+		}
+	}
+}

@@ -1,0 +1,93 @@
+// Mixin for the form inputs and the button
+@mixin form-part($bg-color, $ln-height) {
+	background-color: $bg-color;
+	line-height: $ln-height;
+	font-family: inherit;
+	font-size: 1.6rem;
+	padding: 0.5rem;
+}
+// Mixin for inputs only (incl. <texatarea>)
+@mixin only-inputs {
+	&::placeholder {
+		color: $dimmed-color;
+		color: $main-light-color;
+	}
+	&:active,
+	&:focus {
+		background-color: $main-light-color;
+		&::placeholder {
+			color: $dimmed-color;
+		}
+	}
+	&:not(:placeholder-shown) {
+		background-color: $accent-color--projects;
+		background-color: $accent-color--skills;
+	}
+}
+
+#contact-page .section-header {
+	background-color: $accent-color--contact;
+}
+
+.contact-form {
+	margin: 0 2rem; // MOBILE!
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+
+	&-section {
+		display: flex;
+		flex-direction: column;
+		padding: 0.5rem 1rem;
+
+		label {
+			padding: 1rem 0.5rem;
+		}
+
+		input {
+			@include form-part($accent-color--skills, 2);
+			@include form-part($accent-color--projects, 2);
+			@include only-inputs;
+		}
+		textarea {
+			@include form-part($accent-color--skills, 1);
+			@include form-part($accent-color--projects, 1);
+			@include only-inputs;
+		}
+		button {
+			@include form-part($accent-color--about, 2);
+			text-transform: uppercase;
+		}
+	}
+}
+
+// Change Autocomplete styles in Chrome
+input:-internal-autofill-selected,
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	-webkit-text-fill-color: $main-dark-color;
+	-webkit-box-shadow: 0 0 0px 30px $accent-color--skills inset;
+	box-shadow: 0 0 0px 30px $accent-color--skills inset;
+}
+
+.social-links {
+	padding: 2rem;
+	display: grid;
+	grid-template-columns: repeat(5, 3rem);
+	gap: 1rem;
+	justify-content: center;
+	align-items: center;
+
+	&-icon {
+		width: 100%;
+	}
+}

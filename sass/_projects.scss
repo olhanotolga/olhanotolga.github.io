@@ -1,0 +1,42 @@
+#projects-page .section-header {
+	background-color: $accent-color--projects;
+}
+
+.projects {
+	margin: auto 3rem;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	gap: 2rem;
+	justify-content: center;
+	align-items: center;
+
+	&-card {
+		padding: 1rem;
+		grid-area: span 1;
+		display: flex;
+		flex-direction: column;
+
+		&-screenshot {
+			width: 100%;
+		}
+	}
+	&-one {
+		background-color: $accent-color--about;
+	}
+	&-two {
+		background-color: $accent-color--skills;
+	}
+	&-three {
+		background-color: $support-color;
+	}
+	&-four {
+		background-color: $accent-color--contact;
+	}
+	&-five {
+		background-color: $outline-color;
+	}
+	&-six {
+		background-color: $accent-color--projects;
+	}
+}

@@ -1,0 +1,70 @@
+/* HOMEPAGE */
+
+#homepage,
+.homepage-section,
+.nav-icons,
+.icon-container a {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.letters,
+.nav-icons {
+	flex-direction: column;
+}
+
+/* header letters */
+
+.homepage-letter {
+	font-size: 10rem;
+	font-weight: 900;
+	position: relative;
+	left: -1rem;
+}
+.homepage-letter::after {
+	position: absolute;
+	left: 1rem;
+}
+.o {
+	color: $accent-color--about-shadow;
+	&::after {
+		content: "O";
+		color: $accent-color--about;
+	}
+}
+.l {
+	color: $accent-color--skills-shadow;
+	&::after {
+		content: "L";
+		color: $accent-color--skills;
+	}
+}
+.h {
+	color: $accent-color--projects-shadow;
+	&::after {
+		content: "H";
+		color: $accent-color--projects;
+	}
+}
+.a {
+	color: $accent-color--contact-shadow;
+	&::after {
+		content: "A";
+		color: $accent-color--contact;
+	}
+}
+
+/* navigation icons */
+
+.nav-icons {
+	list-style: none;
+	
+}
+.icon-container a {
+	height: 10rem;
+	align-items: center;
+}
+.icon-container img {
+	max-height: 80%;
+	object-fit: contain;
+}
