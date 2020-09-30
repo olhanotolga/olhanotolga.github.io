@@ -43,7 +43,22 @@ section.page {
 }
 
 
-.sticky-nav {
-	position: sticky;
-	top: 150vh;
-}
+// .sticky-nav {
+// 	position: sticky;
+// 	top: 50vh;
+// 	margin-left: calc(100vw - 6ch);
+// 	display: flex;
+// 	justify-items: center;
+// 	align-items: center;
+// 	text-align: center;
+// 	vertical-align: middle;
+
+// 	a {
+// 		padding: $spacing-normal;
+// 		background-color: $accent-color--skills;
+// 		font-family: $homepage-display-font;
+// 		color: $main-light-color;
+// 		border: 2px solid $accent-color--contact;
+// 		border-radius: $border-radius-small;
+// 	}
+// }
