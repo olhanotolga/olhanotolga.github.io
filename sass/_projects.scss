@@ -5,13 +5,13 @@
 }
 
 .projects {
-	width: 90%;
-	margin: 0 auto;
+	width: 90vw;
+	margin: 2rem auto;
 	display: grid;
-	grid-template-columns: repeat(6, 75vw);
+	grid-template-columns: repeat(6, 80vw);
 	overflow-x: scroll;
-	gap: 2rem;
-	align-items: center;
+	gap: 4rem 2rem;
+	align-content: center;
 
 	&-card {
 		padding: 1rem;
@@ -19,9 +19,30 @@
 		grid-area: span 1;
 		display: flex;
 		flex-direction: column;
+		transition: 0.3s;
 
 		&-screenshot {
 			width: 100%;
+			border-top-left-radius: $border-radius-small;
+			border-top-right-radius: $border-radius-small;
+		}
+		&-text {
+			padding: 1rem;
+			border-bottom-left-radius: $border-radius-small;
+			border-bottom-right-radius: $border-radius-small;
+			color: rgba($main-dark-color, 0.8);
+			font-size: 85%;
+			font-weight: 300;
+
+			span {
+				background-color: rgba($main-dark-color, 0.8);
+				color: $main-light-color;
+				padding: 0 0.3rem;
+			}
+		}
+
+		&:hover {
+			transform: scale(1.05);
 		}
 	}
 	&-one {

@@ -19,6 +19,7 @@
 	}
 	&-paragraph {
 		grid-column: 3 / span 1;
+		padding: 1rem 3rem;
 
 		&::before {
 			@extend %before-styles;
