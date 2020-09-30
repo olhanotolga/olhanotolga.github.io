@@ -1,27 +1,37 @@
 /* HOMEPAGE */
-#homepage {
-	height: 100vh;
-}
 
 #homepage,
 .homepage-section,
 .nav-icons,
 .icon-container a {
-	display: flex;
-	justify-content: space-evenly;
+	display: grid;
+}
+
+#homepage {
+	height: 100vh;
+	grid-template: 1fr / repeat(2, 1fr);
+	justify-items: center;
+}
+.homepage-section {
+	padding: $spacing-normal 0;
 }
 
 .letters,
 .nav-icons {
-	flex-direction: column;
+	grid-template: repeat(4, 1fr) / 1fr;
+	align-items: center;
 }
 
 // header letters
 
+.letters {
+	margin-left: $spacing-medium;
+}
 .homepage-letter {
 	font-family: $homepage-display-font;
-	font-size: 10rem;
+	font-size: 12rem;
 	font-weight: 900;
+	line-height: 1;
 	position: relative;
 	left: -$spacing-normal;
 	
@@ -46,12 +56,10 @@
 // navigation icons
 
 .icon-container {
-	a {
-		height: 10rem;
-		align-items: center;
-	}
+	margin-top: $spacing-normal;
+
 	img {
-		max-height: 80%;
+		max-height: 9rem;
 		object-fit: contain;
 	}
 	span {
@@ -61,13 +69,22 @@
 
 @media screen and (min-width: 550px) {
 
-	#homepage,
-	.icons {
-		flex-direction: column;
+	#homepage {
+		grid-template: repeat(2, 1fr) / 1fr;
 	}
-	.letters,
+	
+	%four-columns {
+		grid-template: 1fr / repeat(4, 15rem);
+		justify-items: center;
+	}
+	.letters {
+		@extend %four-columns;
+		align-items: end;
+		margin-left: 0;
+	}
 	.nav-icons {
-		flex-direction: row;
+		@extend %four-columns;
+		align-items: start;
 	}
 	.icon-container a {
 		display: flex;
@@ -95,7 +112,7 @@
 		
 		.section-nav-title {
 			display: initial;
-			padding: $spacing-normal 0;
+			padding: $spacing-normal 0 0;
 			text-transform: uppercase;
 		}
 	}
