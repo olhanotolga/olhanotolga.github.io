@@ -41,3 +41,9 @@ section.page {
 *:focus {
 	outline: 2px solid $dimmed-color;
 }
+
+
+.sticky-nav {
+	position: sticky;
+	top: 150vh;
+}

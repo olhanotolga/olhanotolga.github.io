@@ -1,3 +1,5 @@
 .DS_Store
 .vscode
 css
+_site
+.jekyll-cache
