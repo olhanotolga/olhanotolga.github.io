@@ -3,6 +3,8 @@
 	box-shadow: 0.1rem 0.5rem 0 $shadow;
 }
 
+// HOMEPAGE
+
 // homepage letters
 @mixin letter($color, $shadow, $content) {
 	color: $shadow;
@@ -19,9 +21,46 @@
 	}
 }
 
+// ABOUT PAGE
+
 // about page: pseudo-elements
 %before-styles {
 	content: "";
 	display: inline-block;
 	position: absolute;
+}
+
+// CONTACT PAGE
+
+// Mixin for the form inputs and the button
+@mixin form-part($bg-color, $ln-height, $fnt-size) {
+	background-color: $bg-color;
+	padding: 0.5rem;
+	border: none;
+	border-radius: $border-radius-small;
+	box-shadow: none;
+	line-height: $ln-height;
+	font-family: inherit;
+	font-size: $fnt-size;
+	transition: 0.3s;
+}
+// Mixin for inputs only (incl. <texatarea>)
+@mixin only-inputs {
+	border: 2px solid $accent-color--skills;
+
+	&::placeholder {
+		color: $dimmed-color;
+	}
+	&:active,
+	&:focus {
+		background-color: $main-light-color;
+		&::placeholder {
+			color: $dimmed-color;
+		}
+	}
+	&:not(:placeholder-shown) {
+		background-color: $accent-color--projects;
+		border: 2px solid $accent-color--projects;
+		color: $accent-color--contact;
+	}
 }

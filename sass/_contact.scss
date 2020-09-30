@@ -1,39 +1,4 @@
-// Mixin for the form inputs and the button
-@mixin form-part($bg-color, $ln-height, $fnt-size) {
-	background-color: $bg-color;
-	padding: 0.5rem;
-	border: none;
-	border-radius: $border-radius-small;
-	box-shadow: none;
-	line-height: $ln-height;
-	font-family: inherit;
-	font-size: $fnt-size;
-	transition: 0.3s;
-}
-// Mixin for inputs only (incl. <texatarea>)
-@mixin only-inputs {
-	border: 2px solid $accent-color--skills;
 
-	&::placeholder {
-		color: $dimmed-color;
-		// color: $main-light-color;
-		// color: $accent-color--contact;
-		// color: $outline-color;
-	}
-	&:active,
-	&:focus {
-		background-color: $main-light-color;
-		&::placeholder {
-			color: $dimmed-color;
-		}
-	}
-	&:not(:placeholder-shown) {
-		background-color: $accent-color--skills;
-		background-color: $accent-color--projects;
-		border: 2px solid $accent-color--projects;
-		color: $accent-color--contact;
-	}
-}
 
 #contact-page {
 	height: 100vh;
@@ -43,7 +8,7 @@
 }
 
 .contact-form {
-	margin: 0 2rem; // MOBILE!
+	margin: 0 2rem;
 	align-self: center;
 	display: flex;
 	flex-direction: column;
@@ -58,20 +23,30 @@
 		}
 
 		input {
-			// @include form-part($accent-color--projects, 2, 1.6rem);
-			// @include form-part($accent-color--skills, 2, 1.6rem);
-			@include form-part($main-light-color, 2, 1.6rem);
+			@include form-part($main-light-color, 1.6, 1.6rem);
 			@include only-inputs;
 		}
 		textarea {
-			// @include form-part($accent-color--projects, 1, 1.6rem);
-			// @include form-part($accent-color--skills, 1, 1.6rem);
 			@include form-part($main-light-color, 1, 1.6rem);
 			@include only-inputs;
 		}
 		button {
 			@include form-part($accent-color--about, 2, 1.8rem);
 			text-transform: uppercase;
+			border-bottom: inset 0.5rem $accent-color--about-shadow;
+			border-left: inset 0.5rem $accent-color--about-shadow;
+			color: $main-light-color;
+			text-shadow: -1px 1px $accent-color--about-shadow;
+
+			&:hover {
+				background-color: $accent-color--about-shadow;
+				border-bottom: inset 0.5rem $accent-color--about;
+				text-shadow: none;
+			}
+			&:active {
+				border-left: none;
+				border-right: inset 0.5rem $accent-color--about-shadow;
+			}
 		}
 	}
 }
@@ -89,9 +64,6 @@ textarea:-webkit-autofill:active,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-	// -webkit-text-fill-color: $main-dark-color;
-	// -webkit-box-shadow: 0 0 0px 30px $accent-color--projects inset;
-	// box-shadow: 0 0 0px 30px $accent-color--projects inset;
 	-webkit-text-fill-color: $accent-color--contact;
 	-webkit-box-shadow: 0 0 0px 30px $accent-color--projects inset;
 	box-shadow: 0 0 0px 30px $accent-color--projects inset;
@@ -101,7 +73,7 @@ select:-webkit-autofill:focus {
 .social-links {
 	padding: 2rem;
 	display: grid;
-	grid-template-columns: repeat(5, 3rem);
+	grid-template-columns: repeat(5, 4rem);
 	gap: 1rem;
 	justify-content: center;
 	align-items: center;
@@ -111,3 +83,16 @@ select:-webkit-autofill:focus {
 	}
 }
 
+// media query for tablets and desktop devices:
+
+@media screen and (min-width: 600px) {
+	.contact-form {
+		width: 70%;
+		margin: 0 auto;
+	}
+}
+@media screen and (min-width: 1000px) {
+	.contact-form {
+		width: 60rem;
+	}
+}
