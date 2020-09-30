@@ -1,6 +1,6 @@
 #skills-page {
 	.section-header {
-		background-color: $accent-color--skills;
+		@include headers($accent-color--skills, $accent-color--skills-shadow);
 	}
 
 	section {

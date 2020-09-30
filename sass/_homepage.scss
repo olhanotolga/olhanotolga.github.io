@@ -13,58 +13,85 @@
 	flex-direction: column;
 }
 
-/* header letters */
+// header letters
 
 .homepage-letter {
 	font-size: 10rem;
 	font-weight: 900;
 	position: relative;
 	left: -1rem;
-}
-.homepage-letter::after {
-	position: absolute;
-	left: 1rem;
+	
+	&::after {
+		position: absolute;
+		left: 1rem;
+	}
 }
 .o {
-	color: $accent-color--about-shadow;
-	&::after {
-		content: "O";
-		color: $accent-color--about;
-	}
+	@include letter($accent-color--about, $accent-color--about-shadow, "O");
 }
 .l {
-	color: $accent-color--skills-shadow;
-	&::after {
-		content: "L";
-		color: $accent-color--skills;
-	}
+	@include letter($accent-color--skills, $accent-color--skills-shadow, "L");
 }
 .h {
-	color: $accent-color--projects-shadow;
-	&::after {
-		content: "H";
-		color: $accent-color--projects;
-	}
+	@include letter($accent-color--projects, $accent-color--projects-shadow, "H");
 }
 .a {
-	color: $accent-color--contact-shadow;
-	&::after {
-		content: "A";
-		color: $accent-color--contact;
+	@include letter($accent-color--contact, $accent-color--contact-shadow, "A");
+}
+
+// navigation icons
+
+.icon-container {
+	a {
+		height: 10rem;
+		align-items: center;
+	}
+	img {
+		max-height: 80%;
+		object-fit: contain;
+	}
+	span {
+		display: none;
 	}
 }
 
-/* navigation icons */
+@media screen and (min-width: 750px) {
+	@mixin icon-hover($bg-col) {
+		&:hover {
+			background-color: rgba($bg-col, 20%);
+			border-radius: 50%;
+		}
+	}
 
-.nav-icons {
-	list-style: none;
+	#homepage,
+	.icons {
+		flex-direction: column;
+	}
+	.letters,
+	.nav-icons {
+		flex-direction: row;
+	}
+	.icon-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.about-img {
+			@include icon-hover($accent-color--about);
+		}
+		.skills-img {
+			@include icon-hover($accent-color--skills);
+		}
+		.projects-img {
+			@include icon-hover($accent-color--projects);
+		}
+		.contact-img {
+			@include icon-hover($accent-color--contact);
+		}
+		.section-nav-title {
+			display: initial;
+			text-transform: uppercase;
+		}
+	}
 	
-}
-.icon-container a {
-	height: 10rem;
-	align-items: center;
-}
-.icon-container img {
-	max-height: 80%;
-	object-fit: contain;
 }

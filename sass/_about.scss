@@ -1,5 +1,7 @@
-#about-page .section-header {
-	background-color: $accent-color--about;
+#about-page {
+	.section-header {
+		@include headers($accent-color--about, $accent-color--about-shadow);
+	}
 }
 
 .about-info {

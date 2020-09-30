@@ -1,5 +1,7 @@
-#projects-page .section-header {
-	background-color: $accent-color--projects;
+#projects-page {
+	.section-header {
+		@include headers($accent-color--projects, $accent-color--projects-shadow);
+	}
 }
 
 .projects {

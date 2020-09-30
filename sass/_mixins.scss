@@ -1,0 +1,13 @@
+@mixin headers($color, $shadow) {
+	background-color: $color;
+	box-shadow: 0.1rem 0.5rem 0 $shadow;
+}
+
+// homepage letters
+@mixin letter($color, $shadow, $content) {
+	color: $shadow;
+	&::after {
+		content: $content;
+		color: $color;
+	}
+}

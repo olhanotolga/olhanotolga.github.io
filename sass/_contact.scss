@@ -35,8 +35,10 @@
 	}
 }
 
-#contact-page .section-header {
-	background-color: $accent-color--contact;
+#contact-page {
+	.section-header {
+		@include headers($accent-color--contact, $accent-color--contact-shadow);
+	}
 }
 
 .contact-form {
