@@ -1,7 +1,7 @@
 @import "reset",
 "functional",
 "variables",
-"mixins",
+"mixins-&-placeholders",
 "homepage",
 "about",
 "skills",
@@ -14,7 +14,7 @@ body {
 }
 
 section.page {
-	min-height: 100vh;
+	min-height: 90vh;
 	padding-bottom: 3rem;
 	display: grid;
     grid-template-rows: auto 1fr auto;

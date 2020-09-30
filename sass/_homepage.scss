@@ -1,4 +1,7 @@
 /* HOMEPAGE */
+#homepage {
+	height: 100vh;
+}
 
 #homepage,
 .homepage-section,
@@ -55,13 +58,7 @@
 	}
 }
 
-@media screen and (min-width: 750px) {
-	@mixin icon-hover($bg-col) {
-		&:hover {
-			background-color: rgba($bg-col, 20%);
-			border-radius: 50%;
-		}
-	}
+@media screen and (min-width: 550px) {
 
 	#homepage,
 	.icons {
@@ -71,25 +68,33 @@
 	.nav-icons {
 		flex-direction: row;
 	}
-	.icon-container {
+	.icon-container a {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 
 		.about-img {
-			@include icon-hover($accent-color--about);
+			@include hp-icon-hover($accent-color--about);
 		}
 		.skills-img {
-			@include icon-hover($accent-color--skills);
+			@include hp-icon-hover($accent-color--skills);
 		}
 		.projects-img {
-			@include icon-hover($accent-color--projects);
+			@include hp-icon-hover($accent-color--projects);
 		}
 		.contact-img {
-			@include icon-hover($accent-color--contact);
+			@include hp-icon-hover($accent-color--contact);
 		}
+	}
+	
+}
+@media screen and (min-width: 550px) and (min-height: 400px) {
+
+	.icon-container a {
+		
 		.section-nav-title {
 			display: initial;
+			padding: 1rem 0;
 			text-transform: uppercase;
 		}
 	}

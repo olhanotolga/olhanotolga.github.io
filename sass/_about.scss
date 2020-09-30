@@ -8,7 +8,6 @@
 	margin: 0 auto;
 	position: relative;
 	display: grid;
-	grid-template: repeat(6, auto) / auto auto 1fr; // on 600+ px
 	grid-template: repeat(6, auto) / calc(7ch + 3rem) auto 1fr; // on mobile
 
 	&-intro {
@@ -22,25 +21,37 @@
 		grid-column: 3 / span 1;
 
 		&::before {
-			content: "";
-			display: inline-block;
-			position: absolute;
+			@extend %before-styles;
 			width: 2rem;
 			height: 2rem;
 			background-color: $accent-color--contact;
 			border-radius: 50%;
-			left: calc(11ch + 4.5rem); // on 600+ px
 			left: calc(7ch + 2.5rem); // on mobile
 		}
 	}
 
 	&::before {
-		content: "";
-		display: inline-block;
-		position: absolute;
+		@extend %before-styles;
 		width: 1rem;
 		height: 100%;
 		background-color: $accent-color--projects;
 		grid-area: 2 / 2 / span 5 / span 1;
+	}
+}
+
+// media query for tablets and desktop devices
+
+@media screen and (min-width: 600px) {
+	#about-page {
+		height: 70vh;
+	}
+	.about-info {
+		max-width: calc(90% - 2rem);
+		overflow-y: auto;
+		grid-template: repeat(6, auto) / auto auto 1fr; // on 600+ px
+		
+		&-paragraph::before {
+			left: calc(11ch + 4.5rem); // on 600+ px
+		}
 	}
 }

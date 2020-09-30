@@ -5,12 +5,12 @@
 }
 
 .projects {
-	margin: auto 3rem;
-	height: 100%;
+	width: 90%;
+	margin: 0 auto;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-template-columns: repeat(6, 75vw);
+	overflow-x: scroll;
 	gap: 2rem;
-	justify-content: center;
 	align-items: center;
 
 	&-card {
@@ -41,5 +41,19 @@
 	}
 	&-six {
 		background-color: $accent-color--projects;
+	}
+}
+
+// media query for tablets and desktop devices
+
+@media screen and (min-width: 600px) {
+	.projects {
+		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+		justify-content: center;
+	}
+}
+@media screen and (min-width: 1000px) {
+	.projects {
+		grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 	}
 }

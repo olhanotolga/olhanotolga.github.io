@@ -11,3 +11,17 @@
 		color: $color;
 	}
 }
+// homepage icons
+@mixin hp-icon-hover($bg-col) {
+	&:hover {
+		background-color: rgba($bg-col, 20%);
+		border-radius: 50%;
+	}
+}
+
+// about page: pseudo-elements
+%before-styles {
+	content: "";
+	display: inline-block;
+	position: absolute;
+}

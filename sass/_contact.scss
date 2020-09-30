@@ -36,6 +36,7 @@
 }
 
 #contact-page {
+	height: 100vh;
 	.section-header {
 		@include headers($accent-color--contact, $accent-color--contact-shadow);
 	}
