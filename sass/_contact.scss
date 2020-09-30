@@ -8,7 +8,7 @@
 }
 
 .contact-form {
-	margin: 0 2rem;
+	margin: 0 $spacing-medium;
 	align-self: center;
 	display: flex;
 	flex-direction: column;
@@ -16,10 +16,10 @@
 	&-section {
 		display: flex;
 		flex-direction: column;
-		padding: 0.5rem 1rem;
+		padding: $spacing-small $spacing-normal;
 
 		label {
-			padding: 1rem 0.5rem;
+			padding: $spacing-normal $spacing-small;
 		}
 
 		input {
@@ -33,19 +33,21 @@
 		button {
 			@include form-part($accent-color--about, 2, 1.8rem);
 			text-transform: uppercase;
-			border-bottom: inset 0.5rem $accent-color--about-shadow;
-			border-left: inset 0.5rem $accent-color--about-shadow;
+			border-bottom: inset $spacing-small $accent-color--about-shadow;
+			border-left: inset $spacing-small $accent-color--about-shadow;
 			color: $main-light-color;
+			font-family: $headings-font;
+			letter-spacing: 1px;
 			text-shadow: -1px 1px $accent-color--about-shadow;
 
 			&:hover {
 				background-color: $accent-color--about-shadow;
-				border-bottom: inset 0.5rem $accent-color--about;
+				border-bottom: inset $spacing-small $accent-color--about;
 				text-shadow: none;
 			}
 			&:active {
 				border-left: none;
-				border-right: inset 0.5rem $accent-color--about-shadow;
+				border-right: inset $spacing-small $accent-color--about-shadow;
 			}
 		}
 	}
@@ -65,21 +67,25 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
 	-webkit-text-fill-color: $accent-color--contact;
-	-webkit-box-shadow: 0 0 0px 30px $accent-color--projects inset;
-	box-shadow: 0 0 0px 30px $accent-color--projects inset;
+	-webkit-box-shadow: 0 0 0px $spacing-medium-x $accent-color--projects inset;
+	box-shadow: 0 0 0px $spacing-medium-x $accent-color--projects inset;
 	
 }
 
 .social-links {
-	padding: 2rem;
+	padding: $spacing-medium;
 	display: grid;
-	grid-template-columns: repeat(5, 4rem);
-	gap: 1rem;
+	grid-template-columns: repeat(5, $spacing-large);
+	gap: $spacing-normal;
 	justify-content: center;
 	align-items: center;
 
 	&-icon {
 		width: 100%;
+
+		&:hover {
+			transform: scale($scale);
+		}
 	}
 }
 

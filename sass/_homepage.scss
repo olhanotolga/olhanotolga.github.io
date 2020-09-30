@@ -19,14 +19,15 @@
 // header letters
 
 .homepage-letter {
+	font-family: $homepage-display-font;
 	font-size: 10rem;
 	font-weight: 900;
 	position: relative;
-	left: -1rem;
+	left: -$spacing-normal;
 	
 	&::after {
 		position: absolute;
-		left: 1rem;
+		left: $spacing-normal;
 	}
 }
 .o {
@@ -94,7 +95,7 @@
 		
 		.section-nav-title {
 			display: initial;
-			padding: 1rem 0;
+			padding: $spacing-normal 0;
 			text-transform: uppercase;
 		}
 	}

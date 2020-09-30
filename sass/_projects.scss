@@ -6,20 +6,20 @@
 
 .projects {
 	width: 90vw;
-	margin: 2rem auto;
+	margin: $spacing-medium auto;
 	display: grid;
 	grid-template-columns: repeat(6, 80vw);
 	overflow-x: scroll;
-	gap: 4rem 2rem;
+	gap: $spacing-large $spacing-medium;
 	align-content: center;
 
 	&-card {
-		padding: 1rem;
+		padding: $spacing-normal;
 		border-radius: $border-radius;
 		grid-area: span 1;
 		display: flex;
 		flex-direction: column;
-		transition: 0.3s;
+		transition: $transition;
 
 		&-screenshot {
 			width: 100%;
@@ -27,22 +27,28 @@
 			border-top-right-radius: $border-radius-small;
 		}
 		&-text {
-			padding: 1rem;
+			padding: $spacing-normal;
 			border-bottom-left-radius: $border-radius-small;
 			border-bottom-right-radius: $border-radius-small;
 			color: rgba($main-dark-color, 0.8);
 			font-size: 85%;
 			font-weight: 300;
 
+			h4 {
+				font-family: $headings-font;
+				text-transform: uppercase;
+				padding-bottom: $spacing-normal;
+			}
+
 			span {
 				background-color: rgba($main-dark-color, 0.8);
 				color: $main-light-color;
-				padding: 0 0.3rem;
+				padding: 0 $spacing-small-x;
 			}
 		}
 
 		&:hover {
-			transform: scale(1.05);
+			transform: scale($scale);
 		}
 	}
 	&-one {

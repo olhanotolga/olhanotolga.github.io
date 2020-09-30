@@ -1,22 +1,45 @@
+// COLORS
 $main-dark-color: #19181A;
 $main-light-color: #fdfef2;
-
 $accent-color--about: #56BAEC;
 $accent-color--about-shadow: #2e97cc;
-
 $accent-color--skills: #9E85CF;
 $accent-color--skills-shadow: #7f62bb;
-
 $accent-color--projects: #D56C33;
 $accent-color--projects-shadow: #c5561a;
-
 $accent-color--contact: #E7D969;
 $accent-color--contact-shadow: #c4b335;
-
 $outline-color: #77ADA5;
 $support-color: #F2B1CE;
-
 $dimmed-color: #b9b9c4;
 
+// SPACING
+$spacing-small-x: 0.3rem;
+$spacing-small: 0.5rem;
+$spacing-normal: 1rem;
+$spacing-medium: 2rem;
+$spacing-medium-x: 3rem;
+$spacing-large: 4rem;
+
+// BORDERS
 $border-radius: 1rem;
 $border-radius-small: 0.5rem;
+$border-radius-circle: 50%; 
+
+// TRANSFORMS
+$rotate: 10deg;
+$scale: 1.05;
+
+// ANIMATION
+$transition: 0.3s;
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
+
+$homepage-display-font: 'Mitr', sans-serif;
+$main-headings-font: 'Mitr', sans-serif;
+$headings-font: 'Red Hat Display', sans-serif;
+$body-font: 'Nunito', sans-serif;

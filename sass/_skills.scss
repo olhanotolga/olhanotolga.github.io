@@ -5,11 +5,15 @@
 
 	section {
 		margin: 0 auto;
-		// overflow-y: auto;
-		width: calc(90vw - 2rem);
+		width: calc(90vw - #{$spacing-medium});
 
 		h3 {
 			text-align: center;
+			margin: $spacing-medium 0;
+			font-family: $headings-font;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 1px;
 		}
 	}
 }
@@ -17,14 +21,13 @@
 .web-dev {
 
 	&-skills {
-		height: calc(90vw - 2rem);
-		padding: 2rem;
+		height: calc(90vw - #{$spacing-medium});
+		padding: $spacing-medium;
 		display: grid;
-		// if-else statements in sass ????
 		grid-template: repeat(5, 1fr) /repeat(5, 1fr);
 		align-items: center;
 		justify-items: center;
-		gap: 0.5rem;
+		gap: $spacing-small;
 		
 		.html {
 			grid-area: 2 / 3 / span 2 / 4;
@@ -54,7 +57,7 @@
 			grid-area: 5 / 2 / span 1 / 3;
 
 			.web-dev-skill-icon {
-				padding: 0.5rem;
+				padding: $spacing-small;
 			}
 		}
 		.git {
@@ -69,7 +72,6 @@
 	}
 	
 	&-skill {
-		border: 1px solid $main-dark-color;
 		border-radius: $border-radius;
 		width: 100%;
 		height: 100%;
@@ -77,10 +79,15 @@
 		justify-content: center;
 		align-items: center;
 		background-color: $main-light-color;
+		transition: $transition;
 		
 		&-icon {
 			max-width: 8vw;
 			object-fit: cover;
+		}
+
+		&:hover {
+			transform: rotate($rotate);
 		}
 	}
 
@@ -89,16 +96,21 @@
 
 .other {
 	&-skills {
-		padding: 2rem;
+		padding: $spacing-medium;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 	&-skill {
 		width: 15vw;
+		transition: $transition;
 
 		&-icon {
 			width: 80%;
+		}
+
+		&:hover {
+			transform: rotate(-$rotate);
 		}
 	}
 }
@@ -114,7 +126,7 @@
 	}
 	.web-dev {
 		&-skills {
-			height: calc(70vw - 2rem);
+			height: calc(70vw - #{$spacing-medium});
 		}
 		&-skill-icon {
 			max-width: 70%;
@@ -130,7 +142,7 @@
 	.web-dev {
 		&-skills {
 			max-height: 60rem;
-			gap: 1rem;
+			gap: $spacing-normal;
 		}
 		&-skill-icon {
 			max-width: 7rem;

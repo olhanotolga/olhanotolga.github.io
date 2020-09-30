@@ -11,6 +11,8 @@
 body {
 	background-color: $main-dark-color;
 	color: $main-light-color;
+	font-family: $body-font;
+	font-weight: 300;
 }
 
 section.page {
@@ -29,6 +31,8 @@ section.page {
 	h2 {
 		padding: 2rem 3rem;
 		font-size: 3rem;
+		font-family: $main-headings-font;
+		font-weight: normal;
 		text-transform: uppercase;
 		transform: skewX(20deg);
 	}

@@ -6,37 +6,37 @@
 
 .about-info {
 	margin: 0 auto;
-	padding: 0 3rem;
+	padding: 0 $spacing-medium-x;
 	position: relative;
 	display: grid;
 	grid-template: repeat(6, auto) / 7ch auto 1fr; // on mobile
 
 	&-intro {
 		grid-area: span 1 / span 3;
-		padding: 1rem 0;
+		padding: $spacing-normal 0;
 	}
 	&-date {
 		color: $support-color;
-		font-weight: 900;
-		padding: 1rem 0;
+		font-weight: 700;
+		padding: $spacing-normal 0;
 	}
 	&-paragraph {
 		grid-column: 3 / span 1;
-		padding: 1rem 3rem;
+		padding: $spacing-normal $spacing-medium-x;
 
 		&::before {
 			@extend %before-styles;
-			width: 2rem;
-			height: 2rem;
+			width: $spacing-medium;
+			height: $spacing-medium;
 			background-color: $accent-color--contact;
-			border-radius: 50%;
+			border-radius: $border-radius-circle;
 			left: calc(7ch + 2.5rem); // on mobile
 		}
 	}
 
 	&::before {
 		@extend %before-styles;
-		width: 1rem;
+		width: $spacing-normal;
 		height: 100%;
 		background-color: $accent-color--projects;
 		grid-area: 2 / 2 / span 5 / span 1;
@@ -46,16 +46,12 @@
 // media query for tablets and desktop devices
 
 @media screen and (min-width: 600px) {
-	#about-page {
-		height: 70vh;
-	}
 	.about-info {
-		max-width: calc(90% - 2rem);
-		overflow-y: auto;
-		grid-template: repeat(6, auto) / 13ch auto 1fr; // on 600+ px
+		max-width: calc(90vw - #{$spacing-medium});
+		grid-template: repeat(6, auto) / 13ch auto 1fr;
 		
 		&-paragraph::before {
-			left: calc(11ch + 4.5rem); // on 600+ px
+			left: calc(11ch + 4.5rem);
 		}
 	}
 }
