@@ -19,8 +19,7 @@ HTML, CSS (Sass/Scss).
 
 The website is responsive thanks to CSS Grid (mainly), Flexbox, and media queries.
 
-![Homepage on mobile devices](./images/screenshots/olhas-portfolio-screenshot-mobile.jpg)
-![Projects page on mobile devices](./images/screenshots/olhas-portfolio-screenshot-mobile-projects.jpg)
+<img src="./images/screenshots/olhas-portfolio-screenshot-mobile.jpg" height="400"  alt="Homepage on mobile devices"> <img src="./images/screenshots/olhas-portfolio-screenshot-mobile-projects.jpg" height="400"  alt="Projects page on mobile devices">
 
 I use the Grid layout and `::before` pseudo elements to create the timeline on the About page.
 
