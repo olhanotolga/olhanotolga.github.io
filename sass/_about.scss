@@ -51,7 +51,7 @@
 		grid-template: repeat(6, auto) / 13ch auto 1fr;
 		
 		&-paragraph::before {
-			left: calc(11ch + 4.5rem);
+			left: calc(11ch + 4.65rem);
 		}
 	}
 }
