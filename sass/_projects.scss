@@ -7,11 +7,12 @@
 .projects {
 	width: 90vw;
 	margin: $spacing-medium auto;
+	padding: $spacing-medium;
 	display: grid;
-	grid-template-columns: repeat(6, 80vw);
+	grid-template-columns: repeat(8, 80vw);
 	overflow-x: scroll;
 	gap: $spacing-large $spacing-medium;
-	align-content: center;
+	// align-content: center;
 
 	&-card {
 		padding: $spacing-normal;
@@ -19,6 +20,7 @@
 		grid-area: span 1;
 		display: flex;
 		flex-direction: column;
+		// justify-content: space-between;
 		transition: $transition;
 
 		&-screenshot {
@@ -34,17 +36,23 @@
 			font-size: 85%;
 			font-weight: 300;
 
-			h4 {
+			h3 {
 				font-family: $headings-font;
 				text-transform: uppercase;
 				padding-bottom: $spacing-normal;
 			}
 
+		}
+		&-footer {
+			margin-top: auto;
+			display: flex;
+			flex-direction: column;
 			span {
 				background-color: rgba($main-dark-color, 0.8);
 				color: $main-light-color;
 				padding: 0 $spacing-small-x;
 			}
+
 		}
 
 		&:hover {
@@ -77,6 +85,9 @@
 	.projects {
 		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 		justify-content: center;
+		&-card {
+			justify-content: start;
+		}
 	}
 }
 @media screen and (min-width: 1000px) {

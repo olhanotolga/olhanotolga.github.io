@@ -9,6 +9,7 @@
 
 #homepage {
 	height: 100vh;
+	padding: $spacing-large 0;
 	grid-template: 1fr / repeat(2, 1fr);
 	justify-items: center;
 }
@@ -33,7 +34,6 @@
 	font-weight: 900;
 	line-height: 1;
 	position: relative;
-	left: -$spacing-normal;
 	
 	&::after {
 		position: absolute;
@@ -54,9 +54,11 @@
 }
 
 // navigation icons
-
+.icons {
+	margin-right: $spacing-medium;
+}
 .icon-container {
-	margin-top: $spacing-normal;
+	margin-top: $spacing-small;
 
 	img {
 		max-height: 9rem;
@@ -77,10 +79,16 @@
 		grid-template: 1fr / repeat(4, 15rem);
 		justify-items: center;
 	}
+	.homepage-letter {
+		left: -$spacing-small;
+	}
 	.letters {
 		@extend %four-columns;
 		align-items: end;
 		margin-left: 0;
+	}
+	.icons {
+		margin-right: 0;
 	}
 	.nav-icons {
 		@extend %four-columns;
