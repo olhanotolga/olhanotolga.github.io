@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-
+	
 	<meta name="author" content="Olha Halat">
 	<meta name="description" content="This is my portfolio page where I showcase my web development projects and demonstrate a little bit of my professional self.">
+	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 	<title>Olha's Portfolio</title>
 
 	<!-- OPEN GRAPH METADATA -->
@@ -14,13 +14,13 @@
 	<meta property="og:description" content="This is my portfolio page where I showcase my web development projects and demonstrate a little bit of my professional self.">
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://olhanotolga.github.io/" />
-	<meta property="og:image" content="" />
+	<meta property="og:image" content="https://raw.githubusercontent.com/olhanotolga/olhanotolga.github.io/master/images/screenshots/portfolio-rectangle.png" />
 
 	<!-- TWITTER CARD METADATA -->
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="Olha's Portfolio" />
 	<meta name="twitter:description" content="This is my portfolio page where I showcase my web development projects and demonstrate a little bit of my professional self." />
-	<meta name="twitter:image" content="" />
+	<meta name="twitter:image" content="https://raw.githubusercontent.com/olhanotolga/olhanotolga.github.io/master/images/screenshots/portfolio-square.png" />
 
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -40,25 +40,25 @@
 			<ul class="nav-icons">
 				<li class="icon-container">
 					<a href="#about-page">
-						<img class="about-img" src="./images/about.png" alt="link to the about section">
+						<img class="about-img" src="./images/about.png" alt="">
 						<span class="section-nav-title">About</span>
 					</a>
 				</li>
 				<li class="icon-container">
 					<a href="#skills-page">
-						<img class="skills-img" src="./images/skills.png" alt="link to the skills section">
+						<img class="skills-img" src="./images/skills.png" alt="">
 						<span class="section-nav-title">Skills</span>
 					</a>
 				</li>
 				<li class="icon-container">
 					<a href="#projects-page">
-						<img class="projects-img" src="./images/projects.png" alt="link to the project section">
+						<img class="projects-img" src="./images/projects.png" alt="">
 						<span class="section-nav-title">Projects</span>
 					</a>
 				</li>
 				<li class="icon-container">
 					<a href="#contact-page">
-						<img class="contact-img" src="./images/contact.png" alt="link to the contact section">
+						<img class="contact-img" src="./images/contact.png" alt="">
 						<span class="section-nav-title">Contact</span>
 					</a>
 				</li>
@@ -165,137 +165,126 @@
 		<ul class="projects">
 			<!-- projects is a ul, and cards are lis.
 				visible: image, title, tags
-				visible on mobile: description, GitHub link
-				visible on hover (>600px): description, GitHub link
+				visible on mobile: image, title, tags
+				visible on hover (>600px) or tap: description, GitHub link, live link
 				clickable 1: image (goes to the live view)
 				clickable 2: GitHub link
 			-->
 
-			<li class="projects-card projects-five">
-				<a href="https://olhanotolga.github.io/erldgt-dream-todo/" target="_blank" rel="noopener noreferrer">
-					<img src="./images/screenshots/erldgt-dark-desktop-btn.png"
-					alt="erldgt: the to-do app"
-					class="projects-card-screenshot">
-				</a>
-				<div class="projects-card-text">
-					<h3>erldgt: the to-do app</h3>
-					<p class="projects-card-text__decription">A to-do app built with React and Material UI. It allows adding, removing, moving around tasks, and marking them as accomplished (in German: "erledigt").</p>
-				</div>
-				<footer class="projects-card-footer">
-					<a href="https://github.com/olhanotolga/erldgt-dream-todo" class="projects-card-text__repo-link">GitHub repo</a>
-					<small>
-						<span>React</span> <span>Material UI</span> <span>CSS</span>
-					</small>
-				</footer>
-			</li>
-
 			<li class="projects-card projects-one">
-				<a href="https://olhanotolga.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">
-					<img src="./images/screenshots/molodist-subtitlers-home-hover.png" alt="a knowledge base for film subtitlers: screenshot" class="projects-card-screenshot">
-				</a>
-				<div class="projects-card-text">
-					<h3>Molodist Subtitlers</h3>
-					<p class="projects-card-text__decription">A knowledge base for film translators and subtitlers of the Molodist film festival, for which I used to subtitle films myself.</p>
+				<img src="./images/screenshots/molodist-subtitlers-home-hover.png" alt="a knowledge base for film subtitlers: screenshot" class="projects-card__screenshot">
+				<div class="projects-card__text">
+					<p class="projects-card__description">A knowledge base for film translators and subtitlers of the Molodist film festival, for which I used to subtitle films myself.
+					</p>
+					<a href="https://olhanotolga.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="projects-card__links-live">live
+					</a>
+					<a href="https://github.com/olhanotolga/molodist-subtitlers" class="projects-card__links-repo">repo</a>
 				</div>
-				<footer class="projects-card-footer">
-					<a href="https://github.com/olhanotolga/molodist-subtitlers" class="projects-card-text__repo-link">GitHub repo</a>
+				<div class="projects-card__info">
+					<h3>Molodist Subtitlers</h3>
 					<small><span>Flask</span> <span>HTML</span> <span>CSS</span> <span>Bootstrap</span> <span>JS (RegExp)</span></small>
-				</footer>
+				</div>
 			</li>
 
 			<li class="projects-card projects-four">
-				<a href="https://olhanotolga.github.io/portfolio/ "target="_blank" rel="noopener noreferrer">
-					<img src="./images/screenshots/portfolio-one.png"
-					alt="my first portfolio: screenshot"
-					class="projects-card-screenshot">
-				</a>
-				<div class="projects-card-text">
-					<h3>Old Portfolio</h3>
-					<p class="projects-card-text__decription">My very first portfolio</p>
+				<img src="./images/screenshots/erldgt-dark-desktop-btn.png"
+					alt="erldgt: the to-do app"
+					class="projects-card__screenshot">
+				<div class="projects-card__text">
+					<p class="projects-card__description">A to-do app built with React and Material UI. Allows adding, removing, dragging, and marking tasks as accomplished (German: "erledigt").
+					</p>
+					<a href="https://olhanotolga.github.io/erldgt-dream-todo/" target="_blank" rel="noopener noreferrer" class="projects-card__links-live">live
+					</a>
+					<a href="https://github.com/olhanotolga/erldgt-dream-todo" class="projects-card__links-repo">repo</a>
 				</div>
-				<footer class="projects-card-footer">
-					<a href="https://github.com/olhanotolga/portfolio" class="projects-card-text__repo-link">GitHub repo</a>
+				<div class="projects-card__info">
+					<h3>erldgt: the to-do app</h3>
+					<small><span>React</span> <span>Material UI</span> <span>CSS</span></small>
+				</div>
+			</li>
+
+			<li class="projects-card projects-five">
+				<img src="./images/screenshots/portfolio-one.png"
+				alt="my first portfolio: screenshot"
+				class="projects-card__screenshot">
+				<div class="projects-card__text">
+					<p class="projects-card__description">My very first portfolio where I initially practiced HTML and CSS. I used a Bootstrap accordion because it both fit the idea and looked like a challenge.</p>
+					<a href="https://olhanotolga.github.io/portfolio/ "target="_blank" rel="noopener noreferrer" class="projects-card__links-live">live</a>
+					<a href="https://github.com/olhanotolga/portfolio" class="projects-card__links-repo">repo</a>
+				</div>
+				<div class="projects-card__info">
+					<h3>Old Portfolio</h3>
 					<small>
 						<span>HTML</span> <span>CSS</span> <span>Bootstrap</span>
 					</small>
-				</footer>
+				</div>
 			</li>
 
 			<li class="projects-card projects-three">
-				<a href="https://olhanotolga.github.io/js-calculator/" target="_blank" rel="noopener noreferrer">
-					<img src="./images/screenshots/calculator-divide-zero.png" alt="JS calculator after dividing by zero: screenshot" class="projects-card-screenshot">
-				</a>
-				<div class="projects-card-text">
-					<h3>JS Calculator</h3>
-					<p class="projects-card-text__decription">A calculator app made with vanilla JavaScript. It was a good exercise which, in particular, taught me a lot about data types and type coercion.</p>
+				<img src="./images/screenshots/calculator-divide-zero.png" alt="JS calculator after dividing by zero: screenshot" class="projects-card__screenshot">
+				<div class="projects-card__text">
+					<p class="projects-card__description">A vanilla JavaScript calculator. It was a good exercise which, in particular, taught me a lot about data types and type coercion.</p>
+					<a href="https://olhanotolga.github.io/js-calculator/" target="_blank" rel="noopener noreferrer" class="projects-card__links-live">live</a>
+					<a href="https://github.com/olhanotolga/js-calculator" class="projects-card__links-repo">repo</a>
 				</div>
-				<footer class="projects-card-footer">
-					<a href="https://github.com/olhanotolga/js-calculator" class="projects-card-text__repo-link">GitHub repo</a>
+				<div class="projects-card__info">
+					<h3>JS Calculator</h3>
 					<small><span>JavaScript</span> <span>HTML</span> <span>CSS</span></small>
-				</footer>
+				</div>
 			</li>
 
 			<li class="projects-card projects-two">
-				<a href="https://olhanotolga.github.io/freeCodeCamp-projects/" target="_blank" rel="noopener noreferrer">
-					<img src="./images/screenshots/js-algorithms-caesars-cipher.png" alt="JS Algorithms projects — Caesar's Cipher: screenshot" class="projects-card-screenshot">
-				</a>
-				<div class="projects-card-text">
-					<h3>JS Algorithms</h3>
-					<p class="projects-card-text__decription">5 final projects of the "JS Algorithms and Data Structures" certification at freeCodeCamp.</p>
+				<img src="./images/screenshots/js-algorithms-caesars-cipher.png" alt="JS Algorithms projects — Caesar's Cipher: screenshot" class="projects-card__screenshot">
+				<div class="projects-card__text">
+					<p class="projects-card__description">Visualization of the 5 final projects of the "JS Algorithms and Data Structures" certification at freeCodeCamp.</p>
+					<a href="https://olhanotolga.github.io/freeCodeCamp-projects/" target="_blank" rel="noopener noreferrer" class="projects-card__links-live">live</a>
+					<a href="https://github.com/olhanotolga/freeCodeCamp-projects" class="projects-card__links-repo">repo</a>
 				</div>
-				<footer class="projects-card-footer">
-					<a href="https://github.com/olhanotolga/freeCodeCamp-projects" class="projects-card-text__repo-link">GitHub repo</a>
+				<div class="projects-card__info">
+					<h3>JS Algorithms</h3>
 					<small><span>JavaScript</span> <span>HTML</span> <span>CSS</span></small>
-				</footer>
+				</div>
 			</li>
 
 			<li class="projects-card projects-four">
-				<a href="https://olhanotolga.github.io/bruno-taut/" target="_blank" rel="noopener noreferrer">
-					<img src="./images/screenshots/bruno-taut-top.png" alt="Bruno Taut tribute page" class="projects-card-screenshot">
-				</a>
-				<div class="projects-card-text">
-					<h3>Bruno Taut</h3>
-					<p class="projects-card-text__decription">An info page dedicated to German architect Bruno Taut. Features a pure CSS illustration.</p>
+				<img src="./images/screenshots/bruno-taut-top.png" alt="Bruno Taut tribute page" class="projects-card__screenshot">
+				<div class="projects-card__text">
+					<p class="projects-card__description">An info page with CSS art, a tribute to the architect Bruno Taut whose housing estates in Berlin are recognized as UNESCO World Heritage Sites.</p>
+					<a href="https://olhanotolga.github.io/bruno-taut/" target="_blank" rel="noopener noreferrer" class="projects-card__links-live">live</a>
+					<a href="https://github.com/olhanotolga/bruno-taut" class="projects-card__links-repo">repo</a>
 				</div>
-				<footer class="projects-card-footer">
-					<a href="https://github.com/olhanotolga/bruno-taut" class="projects-card-text__repo-link">GitHub repo</a>
+				<div class="projects-card__info">
+					<h3>Bruno Taut</h3>
 					<small><span>HTML</span> <span>CSS (SCSS)</span></small>
-				</footer>
+				</div>
 			</li>
 
 			<li class="projects-card projects-six">
-				<a href="https://olhanotolga.github.io/rock-paper-scissors/" target="_blank" rel="noopener noreferrer">
-					<img src="./images/screenshots/rock-paper-scissors.png" alt="JRock, Paper, Scissors game: screenshot" class="projects-card-screenshot">
-				</a>
-				<div class="projects-card-text">
-					<h3>JS games</h3>
-					<p class="projects-card-text__decription">A series of simple browser games built with HTML, CSS, and vanilla JS. Featuring:
-						<ul>
-							<li>Rock, Paper, Scissors</li>
-							<li>Pixel Artboard</li>
-							<li>Guess the Color</li>
-						</ul>
-					</p>
+				<img src="./images/screenshots/rock-paper-scissors.png" alt="JRock, Paper, Scissors game: screenshot" class="projects-card__screenshot">
+				<div class="projects-card__text">
+					<p class="projects-card__description">A series of simple browser games built with HTML, CSS, and vanilla JS. Featuring: Rock, Paper, Scissors, Pixel Artboard, Guess the Color.</p>
+					<a href="https://olhanotolga.github.io/rock-paper-scissors/" target="_blank" rel="noopener noreferrer" class="projects-card__links-live">live</a>
+					<a href="https://github.com/olhanotolga/js-games" class="projects-card__links-repo">repo</a>
 				</div>
-				<footer class="projects-card-footer">
-					<a href="https://github.com/olhanotolga/js-games" class="projects-card-text__repo-link">GitHub repo</a>
+				<div class="projects-card__info">
+					<h3>JS games</h3>
 					<small><span>JavaScript</span> <span>HTML</span> <span>CSS</span></small>
-				</footer>
+				</div>
 			</li>
 
 			<li class="projects-card projects-five">
-				<a href="https://olhanotolga.github.io/raptors_of_berlin/" target="_blank" rel="noopener noreferrer">
-					<img src="./images/screenshots/raptors-berlin-home.png" alt="Raptors of Berlin — a simple website: screenshot" class="projects-card-screenshot">
-				</a>
-				<div class="projects-card-text">
-					<h3>Raptors of Berlin</h3>
-					<p class="projects-card-text__decription">My final project at the DCI MAT-C course — a responsive HTML/CSS website with images.</p>
+				<img src="./images/screenshots/raptors-berlin-home.png" alt="Raptors of Berlin — a simple website: screenshot" class="projects-card__screenshot">
+				<div class="projects-card__text">
+					<p class="projects-card__description">My final project at the DCI intro course — a responsive HTML/CSS website dedicated to raptors that can be spotted in Berlin or around it.</p>
+					<a href="https://olhanotolga.github.io/raptors_of_berlin/" target="_blank" rel="noopener noreferrer" class="projects-card__links-live">live</a>
+					<a href="https://github.com/olhanotolga/raptors_of_berlin" class="projects-card__links-repo">repo</a>
 				</div>
-				<footer class="projects-card-footer">
-					<a href="https://github.com/olhanotolga/raptors_of_berlin" class="projects-card-text__repo-link">GitHub repo</a>
+				<div class="projects-card__info">
+					<h3>Raptors of Berlin</h3>
 					<small><span>HTML</span> <span>CSS</span></small>
-				</footer>
+				</div>
 			</li>
+
 		</ul>
 	</section>
 

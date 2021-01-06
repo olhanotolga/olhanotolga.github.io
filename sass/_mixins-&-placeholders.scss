@@ -32,6 +32,21 @@
 	position: absolute;
 }
 
+// PROJECTS PAGE
+
+@mixin project-card($highlight, $shadow-highlight) {
+	border: 1rem solid $highlight;
+	a {
+		background-color: $highlight;
+		&:hover {
+			background-color: $shadow-highlight;
+		}
+	}
+	h3 {
+		color: $highlight;
+	}
+}
+
 // CONTACT PAGE
 
 // Mixin for the form inputs and the button
