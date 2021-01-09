@@ -76,7 +76,7 @@
 	}
 	
 	%four-columns {
-		grid-template: 1fr / repeat(4, 15rem);
+		grid-template: 1fr / repeat(4, 13rem);
 		justify-items: center;
 	}
 	.homepage-letter {
@@ -99,6 +99,10 @@
 		flex-direction: column;
 		align-items: center;
 
+		img {
+			border-radius: $border-radius-circle;
+		}
+
 		.about-img {
 			@include hp-icon-hover($accent-color--about);
 		}
@@ -112,7 +116,12 @@
 			@include hp-icon-hover($accent-color--contact);
 		}
 	}
-	
+}
+
+@media screen and (max-height: 400px) {
+	#homepage {
+		padding: 0;
+	}
 }
 @media screen and (min-width: 550px) and (min-height: 400px) {
 

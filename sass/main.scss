@@ -43,3 +43,44 @@ section.page {
 *:focus {
 	outline: 2px solid $dimmed-color;
 }
+
+// home button (arrow)
+
+#up {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 8rem;
+	width: 8rem;
+	position: sticky;
+	top: 70vh;
+	left: calc(90vw - max(calc(#{$spacing-medium} + #{$spacing-medium-x}), 5%));
+	z-index: 1;
+	transition: $transition ease-in-out;
+	
+	svg {
+		width: 90%;
+		height: 92%;
+		filter: drop-shadow(1px 1px 0 #77ada5) drop-shadow(-1px 1px 0 #77ada5) drop-shadow(-1px -1px 0 #77ada5) drop-shadow(1px -1px 0 #77ada5) drop-shadow(1px 2px 0 #19181a) drop-shadow(1px 2px 0 #e7d969) drop-shadow(1px 2px 0 #19181a) drop-shadow(1px 2px 0 #F2B1CE);
+		
+		.arrow {
+			fill: $main-dark-color;
+			transition: $transition;
+
+			&:hover {
+				fill: #1f3a36;
+			}
+		}
+	}
+
+	&.show {
+		visibility: visible;
+		opacity: 1;
+	}
+	&.hide {
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+

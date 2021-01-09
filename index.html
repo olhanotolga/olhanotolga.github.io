@@ -66,6 +66,14 @@
 		</nav>
 	</section>
 
+	<!-- sticky up arrow -->
+	<a id="up" href="#homepage">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+			<path class="arrow" d="M68.9,191c-8.27,0-14-1.34-17.46-4.09s-5.28-7.06-5.28-12.73l0-85.85c-12.62-.09-25.43-.23-38.1-.4a9.46,9.46,0,0,1-5.87-1.56A5.29,5.29,0,0,1,0,82a8,8,0,0,1,2.32-5.42l56.28-66C62,6.54,65,3.76,67.66,2.27S74.56,0,80.46,0h19.94c5.9,0,10.09.74,12.81,2.27s5.68,4.26,9.06,8.25l56.3,66a8,8,0,0,1,2.3,5.4,5.28,5.28,0,0,1-2.17,4.41,9.37,9.37,0,0,1-5.86,1.55c-12.48.17-25.17.31-37.72.41,0,0,0,70.86,0,85.85,0,5.66-1.78,9.94-5.28,12.73S120.53,191,112,191Z"/>
+		</svg>
+		<span class="visually-hidden">Back to top</span>
+	</a>
+
 	<section class="page" id="about-page">
 		<header class="section-header">
 			<h2>About</h2>
@@ -163,13 +171,6 @@
 			<h2>Projects</h2>
 		</header>
 		<ul class="projects">
-			<!-- projects is a ul, and cards are lis.
-				visible: image, title, tags
-				visible on mobile: image, title, tags
-				visible on hover (>600px) or tap: description, GitHub link, live link
-				clickable 1: image (goes to the live view)
-				clickable 2: GitHub link
-			-->
 
 			<li class="projects-card projects-one">
 				<img src="./images/screenshots/molodist-subtitlers-home-hover.png" alt="a knowledge base for film subtitlers: screenshot" class="projects-card__screenshot">
@@ -331,5 +332,7 @@
 			</a>
 		</footer>
 	</section>
+
+	<script src="./script/main.js"></script>
 </body>
 </html>

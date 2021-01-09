@@ -16,6 +16,7 @@
 }
 // homepage icons
 @mixin hp-icon-hover($bg-col) {
+	transition: $transition;
 	&:hover {
 		background-color: rgba($bg-col, 20%);
 		border-radius: $border-radius-circle;
