@@ -1,10 +1,6 @@
 @mixin headers($color, $shadow) {
 	background-color: $color;
-<<<<<<< HEAD:_sass/_mixins-&-placeholders.scss
-	box-shadow: 0.1rem 0.5rem 0 $shadow;
-=======
 	box-shadow: 0.3rem 0.5rem 0 $shadow;
->>>>>>> master:sass/_mixins-&-placeholders.scss
 	text-shadow: -1px 2px 0 $shadow;
 }
 
