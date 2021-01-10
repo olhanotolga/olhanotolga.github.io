@@ -1,6 +1,10 @@
 @mixin headers($color, $shadow) {
 	background-color: $color;
+<<<<<<< HEAD:_sass/_mixins-&-placeholders.scss
 	box-shadow: 0.1rem 0.5rem 0 $shadow;
+=======
+	box-shadow: 0.3rem 0.5rem 0 $shadow;
+>>>>>>> master:sass/_mixins-&-placeholders.scss
 	text-shadow: -1px 2px 0 $shadow;
 }
 
@@ -16,6 +20,7 @@
 }
 // homepage icons
 @mixin hp-icon-hover($bg-col) {
+	transition: $transition;
 	&:hover {
 		background-color: rgba($bg-col, 20%);
 		border-radius: $border-radius-circle;
@@ -30,6 +35,21 @@
 	content: "";
 	display: inline-block;
 	position: absolute;
+}
+
+// PROJECTS PAGE
+
+@mixin project-card($highlight, $shadow-highlight) {
+	border: 1rem solid $highlight;
+	a {
+		background-color: $highlight;
+		&:hover {
+			background-color: $shadow-highlight;
+		}
+	}
+	h3 {
+		color: $highlight;
+	}
 }
 
 // CONTACT PAGE
@@ -52,6 +72,7 @@
 
 	&::placeholder {
 		color: $dimmed-color;
+		padding-left: $spacing-small;
 	}
 	&:active,
 	&:focus {

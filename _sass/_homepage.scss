@@ -9,6 +9,7 @@
 
 #homepage {
 	height: 100vh;
+	padding: $spacing-large 0;
 	grid-template: 1fr / repeat(2, 1fr);
 	justify-items: center;
 }
@@ -33,7 +34,6 @@
 	font-weight: 900;
 	line-height: 1;
 	position: relative;
-	left: -$spacing-normal;
 	
 	&::after {
 		position: absolute;
@@ -54,9 +54,11 @@
 }
 
 // navigation icons
-
+.icons {
+	margin-right: $spacing-medium;
+}
 .icon-container {
-	margin-top: $spacing-normal;
+	margin-top: $spacing-small;
 
 	img {
 		max-height: 9rem;
@@ -74,13 +76,19 @@
 	}
 	
 	%four-columns {
-		grid-template: 1fr / repeat(4, 15rem);
+		grid-template: 1fr / repeat(4, 13rem);
 		justify-items: center;
+	}
+	.homepage-letter {
+		left: -$spacing-small;
 	}
 	.letters {
 		@extend %four-columns;
 		align-items: end;
 		margin-left: 0;
+	}
+	.icons {
+		margin-right: 0;
 	}
 	.nav-icons {
 		@extend %four-columns;
@@ -90,6 +98,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		img {
+			border-radius: $border-radius-circle;
+		}
 
 		.about-img {
 			@include hp-icon-hover($accent-color--about);
@@ -104,7 +116,12 @@
 			@include hp-icon-hover($accent-color--contact);
 		}
 	}
-	
+}
+
+@media screen and (max-height: 400px) {
+	#homepage {
+		padding: 0;
+	}
 }
 @media screen and (min-width: 550px) and (min-height: 400px) {
 

@@ -29,6 +29,9 @@
 		justify-items: center;
 		gap: $spacing-small;
 		
+		.mat-ui {
+			grid-area: 2 / 1 / span 1 / 2;
+		}
 		.html {
 			grid-area: 2 / 3 / span 2 / 4;
 		}
@@ -44,14 +47,14 @@
 		.javascript {
 			grid-area: 2 / 2 / span 2 / 3;
 		}
-		.jquery {
-			grid-area: 2 / 1 / span 1 / 2;
-		}
 		.react {
 			grid-area: 3 / 1 / span 1 / 2;
 		}
-		.python {
+		.jquery {
 			grid-area: 4 / 2 / span 1 / 3;
+		}
+		.python {
+			grid-area: 5 / 1 / span 1 / 2;
 		}
 		.flask {
 			grid-area: 5 / 2 / span 1 / 3;
@@ -98,15 +101,18 @@
 	&-skills {
 		padding: $spacing-medium;
 		display: flex;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
 	}
 	&-skill {
-		width: 15vw;
+		width: 13vw;
+		display: flex;
+		justify-content: center;
 		transition: $transition;
 
 		&-icon {
-			width: 80%;
+			width: 90%;
+			height: 100%;
 		}
 
 		&:hover {

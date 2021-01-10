@@ -1,9 +1,8 @@
-
-
 #contact-page {
 	height: 100vh;
 	.section-header {
 		@include headers($accent-color--contact, $accent-color--contact-shadow);
+		text-shadow: 0px 2px #c4b336, -2px 3px 4px #c4b336;
 	}
 }
 
@@ -19,7 +18,7 @@
 		padding: $spacing-small $spacing-normal;
 
 		label {
-			padding: $spacing-normal $spacing-small;
+			padding: $spacing-small $spacing-small $spacing-small $spacing-normal;
 		}
 
 		input {
@@ -34,7 +33,7 @@
 			@include form-part($accent-color--about, 2, 1.8rem);
 			text-transform: uppercase;
 			border-bottom: inset $spacing-small $accent-color--about-shadow;
-			border-left: inset $spacing-small $accent-color--about-shadow;
+			border-right: inset $spacing-small-x $accent-color--about-shadow;
 			color: $main-light-color;
 			font-family: $headings-font;
 			letter-spacing: 1px;
@@ -46,8 +45,8 @@
 				text-shadow: none;
 			}
 			&:active {
-				border-left: none;
-				border-right: inset $spacing-small $accent-color--about-shadow;
+				border-right: none;
+				border-left: inset $spacing-small-x $accent-color--about-shadow;
 			}
 		}
 	}
@@ -72,16 +71,40 @@ select:-webkit-autofill:focus {
 	
 }
 
+.divider {
+	margin: $spacing-large $spacing-large 0 $spacing-large;
+	// margin: $spacing-large $spacing-medium-x 0 $spacing-medium-x;
+	border: none;
+	border-bottom: 0.5rem solid $outline-color;
+	border-radius: 100%;
+	overflow: visible;
+
+	// &::after {
+	// 	display: block;
+	// 	content: "find me here";
+	// 	color: $outline-color;
+	// 	width: fit-content;
+	// 	padding: 0 1rem;
+	// 	position: relative;
+	// 	top: 1ch;
+	// 	left: calc(50% - 7.5ch);
+	// 	background-color: $main-dark-color;
+	// 	letter-spacing: 0.2rem;
+	// 	text-transform: uppercase;
+	// 	font-weight: 600;
+	// }
+}
+
 .social-links {
 	padding: $spacing-medium;
 	display: grid;
 	grid-template-columns: repeat(5, $spacing-large);
-	gap: $spacing-normal;
+	gap: $spacing-small;
 	justify-content: center;
 	align-items: center;
 
 	&-icon {
-		width: 100%;
+		width: 90%;
 
 		&:hover {
 			transform: scale($scale);
