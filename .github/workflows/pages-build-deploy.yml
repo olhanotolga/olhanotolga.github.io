@@ -48,24 +48,27 @@ jobs:
           ls .
 
       # Builds SASS into CSS
-      # - name: Build CSS files
-      # run: sass sass/main.scss css/main.css
+      - name: Build CSS files
+        run: sass sass/main.scss css/main.css
 
       # Upoad static files as artifact
-      # - name: Upload static files as artifact
-      #   id: upload-artifact
-      #   uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
-      #   with:
-      #     path: build_outputs_folder/
+      - name: Upload static files as artifact
+        id: upload-artifact
+        uses: actions/upload-pages-artifact@v4 # or specific "vX.X.X" version tag for this action
+        with:
+          path: '.'
 
   # Deployment job
-  # deploy:
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   steps:
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v4
+  deploy:
+    needs: build
+    permissions:
+      pages: write # to deploy to Pages
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
