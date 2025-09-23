@@ -1,0 +1,53 @@
+name: Build, deploy to GH Pages
+
+on:
+  push:
+    branches: ['main', 'pages-workflow']
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: latest
+
+      - name: Install Node Sass
+        run: npm install -g sass
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build CSS files
+        run: sass sass/main.scss css/main.css
+
+      - name: Upload static files as artifact
+        id: upload-artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: '.'
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write # to deploy to Pages
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
