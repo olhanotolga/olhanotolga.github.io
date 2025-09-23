@@ -43,11 +43,13 @@ jobs:
 
       # Check folder
       - name: Log PWD
-        run: pwd
+        run: |
+          pwd
+          cd .
 
       # Builds SASS into CSS
       # - name: Build CSS files
-      #   run: sass sass/main.scss css/main.css
+      # run: sass sass/main.scss css/main.css
 
       # Upoad static files as artifact
       # - name: Upload static files as artifact
