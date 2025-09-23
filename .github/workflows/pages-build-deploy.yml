@@ -45,7 +45,7 @@ jobs:
       - name: Log PWD
         run: |
           pwd
-          cd .
+          ls .
 
       # Builds SASS into CSS
       # - name: Build CSS files
