@@ -1,63 +1,43 @@
 name: Build, deploy to GH Pages
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: ['main', 'pages-workflow']
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
 jobs:
-  # Build job
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v5
 
-      # Sets up node
       - name: Set up Node
         uses: actions/setup-node@v5
         with:
           node-version: latest
 
-      # Installs Node Sass
       - name: Install Node Sass
         run: npm install -g sass
 
-      # Set up GH Pages
-      # - name: Setup Pages
-      # uses: actions/configure-pages@v5
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
-      # Check folder
-      - name: Log PWD
-        run: |
-          pwd
-          ls .
-
-      # Builds SASS into CSS
       - name: Build CSS files
         run: sass sass/main.scss css/main.css
 
-      # Upoad static files as artifact
       - name: Upload static files as artifact
         id: upload-artifact
-        uses: actions/upload-pages-artifact@v4 # or specific "vX.X.X" version tag for this action
+        uses: actions/upload-pages-artifact@v4
         with:
           path: '.'
 
-  # Deployment job
   deploy:
     needs: build
     permissions:
