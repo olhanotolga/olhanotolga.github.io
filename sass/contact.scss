@@ -1,0 +1,130 @@
+@use "mixins_placeholders";
+@use "variables";
+
+#contact-page {
+	height: 100vh;
+	.section-header {
+		@include mixins_placeholders.headers(variables.$accent-color--contact, variables.$accent-color--contact-shadow);
+		text-shadow: 0px 2px #c4b336, -2px 3px 4px #c4b336;
+	}
+}
+
+.contact-form {
+	margin: 0 variables.$spacing-medium;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+
+	&-section {
+		display: flex;
+		flex-direction: column;
+		padding: variables.$spacing-small variables.$spacing-normal;
+
+		label {
+			padding: variables.$spacing-small variables.$spacing-small variables.$spacing-small variables.$spacing-normal;
+		}
+
+		input {
+			@include mixins_placeholders.form-part(variables.$main-light-color, 1.6, 1.6rem);
+			@include mixins_placeholders.only-inputs;
+		}
+		textarea {
+			@include mixins_placeholders.form-part(variables.$main-light-color, 1, 1.6rem);
+			@include mixins_placeholders.only-inputs;
+		}
+		button {
+			@include mixins_placeholders.form-part(variables.$accent-color--about, 2, 1.8rem);
+			text-transform: uppercase;
+			border-bottom: inset variables.$spacing-small variables.$accent-color--about-shadow;
+			border-right: inset variables.$spacing-small-x variables.$accent-color--about-shadow;
+			color: variables.$main-light-color;
+			font-family: variables.$headings-font;
+			letter-spacing: 1px;
+			text-shadow: -1px 1px variables.$accent-color--about-shadow;
+
+			&:hover {
+				background-color: variables.$accent-color--about-shadow;
+				border-bottom: inset variables.$spacing-small variables.$accent-color--about;
+				text-shadow: none;
+			}
+			&:active {
+				border-right: none;
+				border-left: inset variables.$spacing-small-x variables.$accent-color--about-shadow;
+			}
+		}
+	}
+}
+
+// Change Autocomplete styles in Chrome
+input:-internal-autofill-selected,
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	-webkit-text-fill-color: variables.$accent-color--contact;
+	-webkit-box-shadow: 0 0 0px variables.$spacing-medium-x variables.$accent-color--projects inset;
+	box-shadow: 0 0 0px variables.$spacing-medium-x variables.$accent-color--projects inset;
+	
+}
+
+.divider {
+	margin: variables.$spacing-large variables.$spacing-large 0 variables.$spacing-large;
+	// margin: $spacing-large $spacing-medium-x 0 $spacing-medium-x;
+	border: none;
+	border-bottom: 0.5rem solid variables.$outline-color;
+	border-radius: 100%;
+	overflow: visible;
+
+	// &::after {
+	// 	display: block;
+	// 	content: "find me here";
+	// 	color: $outline-color;
+	// 	width: fit-content;
+	// 	padding: 0 1rem;
+	// 	position: relative;
+	// 	top: 1ch;
+	// 	left: calc(50% - 7.5ch);
+	// 	background-color: $main-dark-color;
+	// 	letter-spacing: 0.2rem;
+	// 	text-transform: uppercase;
+	// 	font-weight: 600;
+	// }
+}
+
+.social-links {
+	padding: variables.$spacing-medium;
+	display: grid;
+	grid-template-columns: repeat(5, variables.$spacing-large);
+	gap: variables.$spacing-small;
+	justify-content: center;
+	align-items: center;
+
+	&-icon {
+		width: 90%;
+
+		&:hover {
+			transform: scale(variables.$scale);
+		}
+	}
+}
+
+// media query for tablets and desktop devices:
+
+@media screen and (min-width: 600px) {
+	.contact-form {
+		width: 70%;
+		margin: 0 auto;
+	}
+}
+@media screen and (min-width: 1000px) {
+	.contact-form {
+		width: 60rem;
+	}
+}

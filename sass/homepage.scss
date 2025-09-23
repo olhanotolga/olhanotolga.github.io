@@ -1,3 +1,6 @@
+@use "mixins_placeholders";
+@use "variables";
+
 /* HOMEPAGE */
 
 #homepage,
@@ -9,12 +12,12 @@
 
 #homepage {
 	height: 100vh;
-	padding: $spacing-large 0;
+	padding: variables.$spacing-large 0;
 	grid-template: 1fr / repeat(2, 1fr);
 	justify-items: center;
 }
 .homepage-section {
-	padding: $spacing-normal 0;
+	padding: variables.$spacing-normal 0;
 }
 
 .letters,
@@ -26,10 +29,10 @@
 // header letters
 
 .letters {
-	margin-left: $spacing-medium;
+	margin-left: variables.$spacing-medium;
 }
 .homepage-letter {
-	font-family: $homepage-display-font;
+	font-family: variables.$homepage-display-font;
 	font-size: 12rem;
 	font-weight: 900;
 	line-height: 1;
@@ -37,28 +40,28 @@
 	
 	&::after {
 		position: absolute;
-		left: $spacing-normal;
+		left: variables.$spacing-normal;
 	}
 }
 .o {
-	@include letter($accent-color--about, $accent-color--about-shadow, "O");
+	@include mixins_placeholders.letter(variables.$accent-color--about, variables.$accent-color--about-shadow, "O");
 }
 .l {
-	@include letter($accent-color--skills, $accent-color--skills-shadow, "L");
+	@include mixins_placeholders.letter(variables.$accent-color--skills, variables.$accent-color--skills-shadow, "L");
 }
 .h {
-	@include letter($accent-color--projects, $accent-color--projects-shadow, "H");
+	@include mixins_placeholders.letter(variables.$accent-color--projects, variables.$accent-color--projects-shadow, "H");
 }
 .a {
-	@include letter($accent-color--contact, $accent-color--contact-shadow, "A");
+	@include mixins_placeholders.letter(variables.$accent-color--contact, variables.$accent-color--contact-shadow, "A");
 }
 
 // navigation icons
 .icons {
-	margin-right: $spacing-medium;
+	margin-right: variables.$spacing-medium;
 }
 .icon-container {
-	margin-top: $spacing-small;
+	margin-top: variables.$spacing-small;
 
 	img {
 		max-height: 9rem;
@@ -80,7 +83,7 @@
 		justify-items: center;
 	}
 	.homepage-letter {
-		left: -$spacing-small;
+		left: -(variables.$spacing-small);
 	}
 	.letters {
 		@extend %four-columns;
@@ -100,20 +103,20 @@
 		align-items: center;
 
 		img {
-			border-radius: $border-radius-circle;
+			border-radius: variables.$border-radius-circle;
 		}
 
 		.about-img {
-			@include hp-icon-hover($accent-color--about);
+			@include mixins_placeholders.hp-icon-hover(variables.$accent-color--about);
 		}
 		.skills-img {
-			@include hp-icon-hover($accent-color--skills);
+			@include mixins_placeholders.hp-icon-hover(variables.$accent-color--skills);
 		}
 		.projects-img {
-			@include hp-icon-hover($accent-color--projects);
+			@include mixins_placeholders.hp-icon-hover(variables.$accent-color--projects);
 		}
 		.contact-img {
-			@include hp-icon-hover($accent-color--contact);
+			@include mixins_placeholders.hp-icon-hover(variables.$accent-color--contact);
 		}
 	}
 }
@@ -129,7 +132,7 @@
 		
 		.section-nav-title {
 			display: initial;
-			padding: $spacing-normal 0 0;
+			padding: variables.$spacing-normal 0 0;
 			text-transform: uppercase;
 		}
 	}

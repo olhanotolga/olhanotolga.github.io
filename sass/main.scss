@@ -1,17 +1,17 @@
-@import "reset",
-"functional",
-"variables",
-"mixins-&-placeholders",
-"homepage",
-"about",
-"skills",
-"projects",
-"contact";
+@use "reset";
+@use "functional";
+@use "variables";
+@use "mixins_placeholders";
+@use "homepage";
+@use "about";
+@use "skills";
+@use "projects";
+@use "contact";
 
 body {
-	background-color: $main-dark-color;
-	color: $main-light-color;
-	font-family: $body-font;
+	background-color: variables.$main-dark-color;
+	color: variables.$main-light-color;
+	font-family: variables.$body-font;
 	font-weight: 300;
 }
 
@@ -28,12 +28,12 @@ section.page {
 	width: calc(90% - 2rem);
 	margin: 2rem auto;
 	transform: skewX(-20deg);
-	border-radius: $border-radius;
+	border-radius: variables.$border-radius;
 
 	h2 {
 		padding: 2rem 3rem;
 		font-size: 3rem;
-		font-family: $main-headings-font;
+		font-family: variables.$main-headings-font;
 		font-weight: normal;
 		text-transform: uppercase;
 		transform: skewX(20deg);
@@ -41,7 +41,7 @@ section.page {
 }
 
 *:focus {
-	outline: 2px solid $dimmed-color;
+	outline: 2px solid variables.$dimmed-color;
 }
 
 // home button (arrow)
@@ -54,9 +54,9 @@ section.page {
 	width: 8rem;
 	position: sticky;
 	top: 70vh;
-	left: calc(90vw - max(calc(#{$spacing-medium} + #{$spacing-medium-x}), 5%));
+	left: calc(90vw - max(calc(#{variables.$spacing-medium} + #{variables.$spacing-medium-x}), 5%));
 	z-index: 1;
-	transition: $transition ease-in-out;
+	transition: variables.$transition ease-in-out;
 	
 	svg {
 		width: 90%;
@@ -64,8 +64,8 @@ section.page {
 		filter: drop-shadow(1px 1px 0 #77ada5) drop-shadow(-1px 1px 0 #77ada5) drop-shadow(-1px -1px 0 #77ada5) drop-shadow(1px -1px 0 #77ada5) drop-shadow(1px 2px 0 #19181a) drop-shadow(1px 2px 0 #e7d969) drop-shadow(1px 2px 0 #19181a) drop-shadow(1px 2px 0 #F2B1CE);
 		
 		.arrow {
-			fill: $main-dark-color;
-			transition: $transition;
+			fill: variables.$main-dark-color;
+			transition: variables.$transition;
 
 			&:hover {
 				fill: #1f3a36;

@@ -1,16 +1,19 @@
+@use "mixins_placeholders";
+@use "variables";
+
 #skills-page {
 	.section-header {
-		@include headers($accent-color--skills, $accent-color--skills-shadow);
+		@include mixins_placeholders.headers(variables.$accent-color--skills, variables.$accent-color--skills-shadow);
 	}
 
 	section {
 		margin: 0 auto;
-		width: calc(90vw - #{$spacing-medium});
+		width: calc(90vw - #{variables.$spacing-medium});
 
 		h3 {
 			text-align: center;
-			margin: $spacing-medium 0;
-			font-family: $headings-font;
+			margin: variables.$spacing-medium 0;
+			font-family: variables.$headings-font;
 			font-weight: 700;
 			text-transform: uppercase;
 			letter-spacing: 1px;
@@ -21,13 +24,13 @@
 .web-dev {
 
 	&-skills {
-		height: calc(90vw - #{$spacing-medium});
-		padding: $spacing-medium;
+		height: calc(90vw - #{variables.$spacing-medium});
+		padding: variables.$spacing-medium;
 		display: grid;
 		grid-template: repeat(5, 1fr) /repeat(5, 1fr);
 		align-items: center;
 		justify-items: center;
-		gap: $spacing-small;
+		gap: variables.$spacing-small;
 		
 		.mat-ui {
 			grid-area: 2 / 1 / span 1 / 2;
@@ -60,7 +63,7 @@
 			grid-area: 5 / 2 / span 1 / 3;
 
 			.web-dev-skill-icon {
-				padding: $spacing-small;
+				padding: variables.$spacing-small;
 			}
 		}
 		.git {
@@ -75,14 +78,14 @@
 	}
 	
 	&-skill {
-		border-radius: $border-radius;
+		border-radius: variables.$border-radius;
 		width: 100%;
 		height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: $main-light-color;
-		transition: $transition;
+		background-color: variables.$main-light-color;
+		transition: variables.$transition;
 		
 		&-icon {
 			max-width: 8vw;
@@ -90,7 +93,7 @@
 		}
 
 		&:hover {
-			transform: rotate($rotate);
+			transform: rotate(variables.$rotate);
 		}
 	}
 
@@ -99,7 +102,7 @@
 
 .other {
 	&-skills {
-		padding: $spacing-medium;
+		padding: variables.$spacing-medium;
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
@@ -108,7 +111,7 @@
 		width: 13vw;
 		display: flex;
 		justify-content: center;
-		transition: $transition;
+		transition: variables.$transition;
 
 		&-icon {
 			width: 90%;
@@ -116,7 +119,7 @@
 		}
 
 		&:hover {
-			transform: rotate(-$rotate);
+			transform: rotate(-(variables.$rotate));
 		}
 	}
 }
@@ -132,7 +135,7 @@
 	}
 	.web-dev {
 		&-skills {
-			height: calc(70vw - #{$spacing-medium});
+			height: calc(70vw - #{variables.$spacing-medium});
 		}
 		&-skill-icon {
 			max-width: 70%;
@@ -148,7 +151,7 @@
 	.web-dev {
 		&-skills {
 			max-height: 60rem;
-			gap: $spacing-normal;
+			gap: variables.$spacing-normal;
 		}
 		&-skill-icon {
 			max-width: 7rem;

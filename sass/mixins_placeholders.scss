@@ -1,3 +1,5 @@
+@use "variables";
+
 @mixin headers($color, $shadow) {
 	background-color: $color;
 	box-shadow: 0.3rem 0.5rem 0 $shadow;
@@ -16,10 +18,10 @@
 }
 // homepage icons
 @mixin hp-icon-hover($bg-col) {
-	transition: $transition;
+	transition: variables.$transition;
 	&:hover {
 		background-color: rgba($bg-col, 20%);
-		border-radius: $border-radius-circle;
+		border-radius: variables.$border-radius-circle;
 	}
 }
 
@@ -53,33 +55,33 @@
 // Mixin for the form inputs and the button
 @mixin form-part($bg-color, $ln-height, $fnt-size) {
 	background-color: $bg-color;
-	padding: $spacing-small;
+	padding: variables.$spacing-small;
 	border: none;
-	border-radius: $border-radius-small;
+	border-radius: variables.$border-radius-small;
 	box-shadow: none;
 	line-height: $ln-height;
 	font-family: inherit;
 	font-size: $fnt-size;
-	transition: $transition;
+	transition: variables.$transition;
 }
 // Mixin for inputs only (incl. <texatarea>)
 @mixin only-inputs {
-	border: 2px solid $accent-color--skills;
+	border: 2px solid variables.$accent-color--skills;
 
 	&::placeholder {
-		color: $dimmed-color;
-		padding-left: $spacing-small;
+		color: variables.$dimmed-color;
+		padding-left: variables.$spacing-small;
 	}
 	&:active,
 	&:focus {
-		background-color: $main-light-color;
+		background-color: variables.$main-light-color;
 		&::placeholder {
-			color: $dimmed-color;
+			color: variables.$dimmed-color;
 		}
 	}
 	&:not(:placeholder-shown) {
-		background-color: $accent-color--projects;
-		border: 2px solid $accent-color--projects;
-		color: $accent-color--contact;
+		background-color: variables.$accent-color--projects;
+		border: 2px solid variables.$accent-color--projects;
+		color: variables.$accent-color--contact;
 	}
 }

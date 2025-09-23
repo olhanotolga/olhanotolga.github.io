@@ -1,0 +1,153 @@
+@use "mixins_placeholders";
+@use "variables";
+
+#projects-page {
+	.section-header {
+		@include mixins_placeholders.headers(variables.$accent-color--projects, variables.$accent-color--projects-shadow);
+	}
+}
+
+.projects {
+	width: 90vw;
+	margin: variables.$spacing-medium auto;
+	padding: variables.$spacing-medium;
+	display: grid;
+	grid-template-columns: repeat(8, 80vw);
+	overflow-x: scroll;
+	gap: variables.$spacing-large variables.$spacing-medium;
+	align-items: center;
+
+	&-card {
+		height: min(100%, 37rem);
+		padding: variables.$spacing-normal;
+		border-radius: variables.$border-radius;
+		grid-area: span 1;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		overflow: hidden;
+		transition: variables.$transition;
+
+		&__screenshot {
+			width: 100%;
+			border-top-left-radius: variables.$border-radius-small;
+			border-top-right-radius: variables.$border-radius-small;
+		}
+		&__text {
+			height: 100%;
+			display: grid;
+			grid-template: auto min-content / 1fr 1fr;
+			align-content: center;
+			gap: variables.$spacing-medium-x variables.$spacing-normal;
+			padding: variables.$spacing-medium;
+			background-color: rgba(variables.$main-dark-color, 0.85);
+			color: variables.$main-light-color;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translateY(-30vh);
+			visibility: hidden;
+			opacity: 0;
+			transition: variables.$transition-slower cubic-bezier(0.84, -0.09, 0.21, 1.23);
+			
+			p {
+				grid-row: span 1;
+				grid-column: span 2;
+				font-size: clamp(2vh, 1.8rem, 5.5vw);
+			}
+
+			a {
+				grid-column: span 1;
+				grid-row: 2 / 3;
+				text-align: center;
+				text-transform: uppercase;
+				color: variables.$main-dark-color;
+				font-weight: 900;
+				padding: variables.$spacing-small;
+				border-radius: variables.$border-radius-small;
+				transition: variables.$transition;
+			}
+		}
+		&__info {
+			display: flex;
+			flex-direction: column;
+			margin-top: auto;
+			font-size: 85%;
+			font-weight: 300;
+
+			h3, small {
+				padding: variables.$spacing-normal;
+			}
+			h3 {
+				margin: 0;
+				font-family: variables.$headings-font;
+				text-transform: uppercase;
+			}
+			span {
+				display: inline-block;
+				margin: 1px;
+				background-color: #e9ecef;
+				color: #19181a;
+				padding: 0 variables.$spacing-small-x;
+				font-weight: 600;
+			}
+
+		}
+		&__repo-link {
+			color: variables.$main-light-color;
+		}
+		&-footer {
+			margin-top: auto;
+			margin-bottom: variables.$spacing-normal;
+			margin: auto variables.$spacing-normal variables.$spacing-normal variables.$spacing-normal;
+			display: flex;
+			flex-direction: column;
+		}
+
+		&:hover {
+			transform: scale(variables.$scale);
+
+			.projects-card__text {
+				transform: translateY(0vh);
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	&-one {
+		@include mixins_placeholders.project-card(variables.$accent-color--about, variables.$accent-color--about-shadow);
+	}
+	&-two {
+		@include mixins_placeholders.project-card(variables.$accent-color--skills, variables.$accent-color--skills-shadow);
+	}
+	&-three {
+		@include mixins_placeholders.project-card(variables.$support-color, variables.$support-color--shadow);
+	}
+	&-four {
+		@include mixins_placeholders.project-card(variables.$accent-color--contact, variables.$accent-color--contact-shadow);
+	}
+	&-five {
+		@include mixins_placeholders.project-card(variables.$outline-color, variables.$outline-color--shadow);
+	}
+	&-six {
+		@include mixins_placeholders.project-card(variables.$accent-color--projects, variables.$accent-color--projects-shadow);
+	}
+}
+
+// media query for tablets and desktop devices
+
+@media screen and (min-width: 600px) {
+	.projects {
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		justify-content: center;
+		&-card {
+			justify-content: start;
+		}
+	}
+}
+@media screen and (min-width: 1000px) {
+	.projects {
+		grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+		
+	}
+}
