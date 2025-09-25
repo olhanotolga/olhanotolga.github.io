@@ -131,7 +131,7 @@
 		align-items: center;
 	}
 	&-skill {
-		width: 13vw;
+		max-width: 100px;
 		display: flex;
 		justify-content: center;
 		transition: variables.$transition;
