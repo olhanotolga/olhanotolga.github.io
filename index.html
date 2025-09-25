@@ -206,162 +206,207 @@
 
   <section class="page" id="projects-page">
     <header class="section-header">
-      <h2>Projects</h2>
+      <h2 id="projects">Projects</h2>
     </header>
-    <ul class="projects">
+    <section aria-labelledby="projects" role="grid">
+      <p class="projects-nav-hint">
+        You can use <strong>arrow keys</strong> to move between project cards.<br />
+        Press <strong>Enter</strong> to expand more information and <strong>Escape</strong> to collapse. Focus the
+        link-buttons with <strong>Tab</strong>. Press
+        an <strong>arrow key</strong> to go to the next project.</p>
 
-      <li class="projects-card projects-three">
-        <img src="./images/screenshots/buybyebuy.png" alt="BuyByeBuy — a web shop simulator: screenshot"
-          class="projects-card__screenshot">
-        <div class="projects-card__text">
-          <p class="projects-card__description">A webshop simulator made with React + Styled Components. The data comes
-            from a Google spreadsheet which I'm using as a JSON endpoint.</p>
-          <a href="https://buybyebuy.vercel.app/" target="_blank" rel="noopener noreferrer"
-            class="projects-card__links-live">live</a>
-          <a href="https://github.com/olhanotolga/buybyebuy" class="projects-card__links-repo">repo</a>
-        </div>
-        <div class="projects-card__info">
-          <h3>BuyByeBuy</h3>
-          <small><span>React</span> <span>Styled Components</span> <span>React Router</span></small>
-        </div>
-      </li>
+      <ul class="projects" role="row">
+        <li class="projects-card projects-three" role="gridcell" tabindex="0" aria-expanded="false"
+          aria-controls="project-text-three">
+          <img src="./images/screenshots/buybyebuy.png" alt="BuyByeBuy — a web shop simulator: screenshot"
+            class="projects-card__screenshot">
+          <div class="projects-card__info">
+            <h3>BuyByeBuy</h3>
+            <small><span>React</span> <span>Styled Components</span> <span>React Router</span></small>
+          </div>
+          <div class="projects-card__text hidden" id="project-text-three">
+            <p class="projects-card__description">A webshop simulator made with React + Styled Components. The data
+              comes
+              from a Google spreadsheet which I'm using as a JSON endpoint.</p>
+            <a href="https://buybyebuy.vercel.app/" target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live</a>
+            <a href="https://github.com/olhanotolga/buybyebuy" class="projects-card__links-repo" target="_blank"
+              rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
 
-      <li class="projects-card projects-one">
-        <img src="./images/screenshots/molodist-subtitlers-home-hover.png"
-          alt="a knowledge base for film subtitlers: screenshot" class="projects-card__screenshot">
-        <div class="projects-card__text">
-          <p class="projects-card__description">A knowledge base for film translators and subtitlers of the Molodist
-            film festival, for which I used to subtitle films myself.
-          </p>
-          <a href="https://olhanotolga.pythonanywhere.com/" target="_blank" rel="noopener noreferrer"
-            class="projects-card__links-live">live
-          </a>
-          <a href="https://github.com/olhanotolga/molodist-subtitlers" class="projects-card__links-repo">repo</a>
-        </div>
-        <div class="projects-card__info">
-          <h3>Molodist Subtitlers</h3>
-          <small><span>Flask</span> <span>HTML</span> <span>CSS</span> <span>Bootstrap</span> <span>JS
-              (RegExp)</span></small>
-        </div>
-      </li>
+        <li class="projects-card projects-one" role="gridcell" tabindex="-1" aria-expanded="false"
+          aria-controls="project-text-one">
+          <img src="./images/screenshots/molodist-subtitlers-home-hover.png"
+            alt="a knowledge base for film subtitlers: screenshot" class="projects-card__screenshot">
 
-      <li class="projects-card projects-four">
-        <img src="./images/screenshots/erldgt-dark-desktop-btn.png" alt="erldgt: the to-do app"
-          class="projects-card__screenshot">
-        <div class="projects-card__text">
-          <p class="projects-card__description">A to-do app built with React and Material UI. Allows adding, removing,
-            dragging, and marking tasks as accomplished (German: "erledigt").
-          </p>
-          <a href="https://olhanotolga.github.io/erldgt-dream-todo/" target="_blank" rel="noopener noreferrer"
-            class="projects-card__links-live">live
-          </a>
-          <a href="https://github.com/olhanotolga/erldgt-dream-todo" class="projects-card__links-repo">repo</a>
-        </div>
-        <div class="projects-card__info">
-          <h3>erldgt: the to-do app</h3>
-          <small><span>React</span> <span>Material UI</span> <span>CSS</span></small>
-        </div>
-      </li>
+          <div class="projects-card__info">
+            <h3>Molodist Subtitlers</h3>
+            <small><span>Flask</span> <span>HTML</span> <span>CSS</span> <span>Bootstrap</span> <span>JS
+                (RegExp)</span></small>
+          </div>
 
-      <li class="projects-card projects-five">
-        <img src="./images/screenshots/portfolio-one.png" alt="my first portfolio: screenshot"
-          class="projects-card__screenshot">
-        <div class="projects-card__text">
-          <p class="projects-card__description">My very first portfolio where I initially practiced HTML and CSS. I used
-            a Bootstrap accordion because it both fit the idea and looked like a challenge.</p>
-          <a href="https://olhanotolga.github.io/portfolio/ " target="_blank" rel="noopener noreferrer"
-            class="projects-card__links-live">live</a>
-          <a href="https://github.com/olhanotolga/portfolio" class="projects-card__links-repo">repo</a>
-        </div>
-        <div class="projects-card__info">
-          <h3>Old Portfolio</h3>
-          <small>
-            <span>HTML</span> <span>CSS</span> <span>Bootstrap</span>
-          </small>
-        </div>
-      </li>
+          <div class="projects-card__text hidden" id="project-text-one">
+            <p class="projects-card__description">A knowledge base for film translators and subtitlers of the Molodist
+              film festival, for which I used to subtitle films myself.
+            </p>
+            <a href="https://olhanotolga.pythonanywhere.com/" target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live
+            </a>
+            <a href="https://github.com/olhanotolga/molodist-subtitlers" class="projects-card__links-repo"
+              target="_blank" rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
 
-      <li class="projects-card projects-three">
-        <img src="./images/screenshots/calculator-divide-zero.png"
-          alt="JS calculator after dividing by zero: screenshot" class="projects-card__screenshot">
-        <div class="projects-card__text">
-          <p class="projects-card__description">A vanilla JavaScript calculator. It was a good exercise which, in
-            particular, taught me a lot about data types and type coercion.</p>
-          <a href="https://olhanotolga.github.io/js-calculator/" target="_blank" rel="noopener noreferrer"
-            class="projects-card__links-live">live</a>
-          <a href="https://github.com/olhanotolga/js-calculator" class="projects-card__links-repo">repo</a>
-        </div>
-        <div class="projects-card__info">
-          <h3>JS Calculator</h3>
-          <small><span>JavaScript</span> <span>HTML</span> <span>CSS</span></small>
-        </div>
-      </li>
+        <li class="projects-card projects-four" role="gridcell" tabindex="-1" aria-expanded="false"
+          aria-controls="project-text-four">
+          <img src="./images/screenshots/erldgt-dark-desktop-btn.png" alt="erldgt: the to-do app"
+            class="projects-card__screenshot">
 
-      <li class="projects-card projects-two">
-        <img src="./images/screenshots/js-algorithms-caesars-cipher.png"
-          alt="JS Algorithms projects — Caesar's Cipher: screenshot" class="projects-card__screenshot">
-        <div class="projects-card__text">
-          <p class="projects-card__description">Visualization of the 5 final projects of the "JS Algorithms and Data
-            Structures" certification at freeCodeCamp.</p>
-          <a href="https://olhanotolga.github.io/freeCodeCamp-projects/" target="_blank" rel="noopener noreferrer"
-            class="projects-card__links-live">live</a>
-          <a href="https://github.com/olhanotolga/freeCodeCamp-projects" class="projects-card__links-repo">repo</a>
-        </div>
-        <div class="projects-card__info">
-          <h3>JS Algorithms</h3>
-          <small><span>JavaScript</span> <span>HTML</span> <span>CSS</span></small>
-        </div>
-      </li>
+          <div class="projects-card__info">
+            <h3>erldgt: the to-do app</h3>
+            <small><span>React</span> <span>Material UI</span> <span>CSS</span></small>
+          </div>
 
-      <li class="projects-card projects-four">
-        <img src="./images/screenshots/bruno-taut-top.png" alt="Bruno Taut tribute page"
-          class="projects-card__screenshot">
-        <div class="projects-card__text">
-          <p class="projects-card__description">An info page with CSS art, a tribute to the architect Bruno Taut whose
-            housing estates in Berlin are recognized as UNESCO World Heritage Sites.</p>
-          <a href="https://olhanotolga.github.io/bruno-taut/" target="_blank" rel="noopener noreferrer"
-            class="projects-card__links-live">live</a>
-          <a href="https://github.com/olhanotolga/bruno-taut" class="projects-card__links-repo">repo</a>
-        </div>
-        <div class="projects-card__info">
-          <h3>Bruno Taut</h3>
-          <small><span>HTML</span> <span>CSS (SCSS)</span></small>
-        </div>
-      </li>
+          <div class="projects-card__text hidden" id="project-text-four">
+            <p class="projects-card__description">A to-do app built with React and Material UI. Allows adding, removing,
+              dragging, and marking tasks as accomplished (German: "erledigt").
+            </p>
+            <a href="https://olhanotolga.github.io/erldgt-dream-todo/" target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live
+            </a>
+            <a href="https://github.com/olhanotolga/erldgt-dream-todo" class="projects-card__links-repo" target="_blank"
+              rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
 
-      <li class="projects-card projects-six">
-        <img src="./images/screenshots/rock-paper-scissors.png" alt="JRock, Paper, Scissors game: screenshot"
-          class="projects-card__screenshot">
-        <div class="projects-card__text">
-          <p class="projects-card__description">A series of simple browser games built with HTML, CSS, and vanilla JS.
-            Featuring: Rock, Paper, Scissors, Pixel Artboard, Guess the Color.</p>
-          <a href="https://olhanotolga.github.io/rock-paper-scissors/" target="_blank" rel="noopener noreferrer"
-            class="projects-card__links-live">live</a>
-          <a href="https://github.com/olhanotolga/js-games" class="projects-card__links-repo">repo</a>
-        </div>
-        <div class="projects-card__info">
-          <h3>JS games</h3>
-          <small><span>JavaScript</span> <span>HTML</span> <span>CSS</span></small>
-        </div>
-      </li>
+        <li class="projects-card projects-five" role="gridcell" tabindex="-1" aria-expanded="false"
+          aria-controls="project-text-five">
+          <img src="./images/screenshots/portfolio-one.png" alt="my first portfolio: screenshot"
+            class="projects-card__screenshot">
 
-      <li class="projects-card projects-five">
-        <img src="./images/screenshots/raptors-berlin-home.png" alt="Raptors of Berlin — a simple website: screenshot"
-          class="projects-card__screenshot">
-        <div class="projects-card__text">
-          <p class="projects-card__description">My final project at the DCI intro course — a responsive HTML/CSS website
-            dedicated to raptors that can be spotted in Berlin or around it.</p>
-          <a href="https://olhanotolga.github.io/raptors_of_berlin/" target="_blank" rel="noopener noreferrer"
-            class="projects-card__links-live">live</a>
-          <a href="https://github.com/olhanotolga/raptors_of_berlin" class="projects-card__links-repo">repo</a>
-        </div>
-        <div class="projects-card__info">
-          <h3>Raptors of Berlin</h3>
-          <small><span>HTML</span> <span>CSS</span></small>
-        </div>
-      </li>
+          <div class="projects-card__info">
+            <h3>Old Portfolio</h3>
+            <small>
+              <span>HTML</span> <span>CSS</span> <span>Bootstrap</span>
+            </small>
+          </div>
 
-    </ul>
+          <div class="projects-card__text hidden" id="project-text-five">
+            <p class="projects-card__description">My very first portfolio where I initially practiced HTML and CSS. I
+              used
+              a Bootstrap accordion because it both fit the idea and looked like a challenge.</p>
+            <a href="https://olhanotolga.github.io/portfolio/ " target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live</a>
+            <a href="https://github.com/olhanotolga/portfolio" class="projects-card__links-repo" target="_blank"
+              rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
+
+        <li class="projects-card projects-three" role="gridcell" tabindex="-1" aria-expanded="false"
+          aria-controls="project-text-three">
+          <img src="./images/screenshots/calculator-divide-zero.png"
+            alt="JS calculator after dividing by zero: screenshot" class="projects-card__screenshot">
+
+          <div class="projects-card__info">
+            <h3>JS Calculator</h3>
+            <small><span>JavaScript</span> <span>HTML</span> <span>CSS</span></small>
+          </div>
+
+          <div class="projects-card__text hidden" aria-controls="project-text-three">
+            <p class="projects-card__description">A vanilla JavaScript calculator. It was a good exercise which, in
+              particular, taught me a lot about data types and type coercion.</p>
+            <a href="https://olhanotolga.github.io/js-calculator/" target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live</a>
+            <a href="https://github.com/olhanotolga/js-calculator" class="projects-card__links-repo" target="_blank"
+              rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
+
+        <li class="projects-card projects-two" role="gridcell" tabindex="-1" aria-expanded="false"
+          aria-controls="project-text-two">
+          <img src="./images/screenshots/js-algorithms-caesars-cipher.png"
+            alt="JS Algorithms projects — Caesar's Cipher: screenshot" class="projects-card__screenshot">
+
+          <div class="projects-card__info">
+            <h3>JS Algorithms</h3>
+            <small><span>JavaScript</span> <span>HTML</span> <span>CSS</span></small>
+          </div>
+
+          <div class="projects-card__text hidden" id="project-text-two">
+            <p class="projects-card__description">Visualization of the 5 final projects of the "JS Algorithms and Data
+              Structures" certification at freeCodeCamp.</p>
+            <a href="https://olhanotolga.github.io/freeCodeCamp-projects/" target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live</a>
+            <a href="https://github.com/olhanotolga/freeCodeCamp-projects" class="projects-card__links-repo"
+              target="_blank" rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
+
+        <li class="projects-card projects-four" role="gridcell" tabindex="-1" aria-expanded="false"
+          aria-controls="project-text-four">
+          <img src="./images/screenshots/bruno-taut-top.png" alt="Bruno Taut tribute page"
+            class="projects-card__screenshot">
+
+          <div class="projects-card__info">
+            <h3>Bruno Taut</h3>
+            <small><span>HTML</span> <span>CSS (SCSS)</span></small>
+          </div>
+
+          <div class="projects-card__text hidden" id="project-text-four">
+            <p class="projects-card__description">An info page with CSS art, a tribute to the architect Bruno Taut whose
+              housing estates in Berlin are recognized as UNESCO World Heritage Sites.</p>
+            <a href="https://olhanotolga.github.io/bruno-taut/" target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live</a>
+            <a href="https://github.com/olhanotolga/bruno-taut" class="projects-card__links-repo" target="_blank"
+              rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
+
+        <li class="projects-card projects-six" role="gridcell" tabindex="-1" aria-expanded="false"
+          aria-controls="project-text-six">
+          <img src="./images/screenshots/rock-paper-scissors.png" alt="JRock, Paper, Scissors game: screenshot"
+            class="projects-card__screenshot">
+
+          <div class="projects-card__info">
+            <h3>JS games</h3>
+            <small><span>JavaScript</span> <span>HTML</span> <span>CSS</span></small>
+          </div>
+
+          <div class="projects-card__text hidden" id="project-text-six">
+            <p class="projects-card__description">A series of simple browser games built with HTML, CSS, and vanilla JS.
+              Featuring: Rock, Paper, Scissors, Pixel Artboard, Guess the Color.</p>
+            <a href="https://olhanotolga.github.io/rock-paper-scissors/" target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live</a>
+            <a href="https://github.com/olhanotolga/js-games" class="projects-card__links-repo" target="_blank"
+              rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
+
+        <li class="projects-card projects-five" role="gridcell" tabindex="-1" aria-expanded="false"
+          aria-controls="project-text-five">
+          <img src="./images/screenshots/raptors-berlin-home.png" alt="Raptors of Berlin — a simple website: screenshot"
+            class="projects-card__screenshot">
+
+          <div class="projects-card__info">
+            <h3>Raptors of Berlin</h3>
+            <small><span>HTML</span> <span>CSS</span></small>
+          </div>
+
+          <div class="projects-card__text hidden" id="project-text-five">
+            <p class="projects-card__description">My final project at the DCI intro course — a responsive HTML/CSS
+              website
+              dedicated to raptors that can be spotted in Berlin or around it.</p>
+            <a href="https://olhanotolga.github.io/raptors_of_berlin/" target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live</a>
+            <a href="https://github.com/olhanotolga/raptors_of_berlin" class="projects-card__links-repo" target="_blank"
+              rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
+
+      </ul>
+
+    </section>
   </section>
 
   <section class="page" id="contact-page">

@@ -7,12 +7,23 @@
 	}
 }
 
+.projects-nav-hint {
+    width: 90vw;
+    margin: 0 auto;
+    padding: variables.$spacing-normal variables.$spacing-medium-x;
+
+    strong {
+      font-weight: 900;
+      color: variables.$outline-color;
+    }
+}
+
 .projects {
 	width: 90vw;
-	margin: variables.$spacing-medium auto;
+	margin: 0 auto variables.$spacing-medium;
 	padding: variables.$spacing-medium;
 	display: grid;
-	grid-template-columns: repeat(8, 80vw);
+	grid-template-columns: repeat(5, 80vw);
 	overflow-x: scroll;
 	gap: variables.$spacing-large variables.$spacing-medium;
 	align-items: center;
@@ -45,10 +56,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			transform: translateY(-30vh);
-			visibility: hidden;
-			opacity: 0;
-			transition: variables.$transition-slower cubic-bezier(0.84, -0.09, 0.21, 1.23);
+			transition: variables.$transition-slowest cubic-bezier(0.84, -0.09, 0.21, 1.23);
 			
 			p {
 				grid-row: span 1;
@@ -68,6 +76,17 @@
 				transition: variables.$transition;
 			}
 		}
+    &__text.hidden  {
+          transform: translateY(-30vh);
+          visibility: hidden;
+          opacity: 0;
+    }
+    &__text.visible  {
+        
+        transform: translateY(0vh);
+        opacity: 1;
+        visibility: visible;
+    }
 		&__info {
 			display: flex;
 			flex-direction: column;
@@ -103,8 +122,8 @@
 			display: flex;
 			flex-direction: column;
 		}
-
-		&:hover {
+		
+    &:hover {
 			transform: scale(variables.$scale);
 
 			.projects-card__text {
@@ -113,6 +132,9 @@
 				visibility: visible;
 			}
 		}
+    &:focus, &[aria-expanded='true'] {
+      transform: scale(variables.$scale);
+    }
 	}
 	&-one {
 		@include mixins_placeholders.project-card(variables.$accent-color--about, variables.$accent-color--about-shadow);
