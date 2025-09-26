@@ -55,6 +55,22 @@
 	}
 }
 
+#form-feedback-message {
+  height: 3em;
+  margin: 0 auto;
+  padding: variables.$spacing-normal variables.$spacing-medium-x;
+  color: variables.$support-color;
+  font-weight: 700;
+}
+#form-feedback-message.hidden  {
+    visibility: hidden;
+    opacity: 0;
+}
+#form-feedback-message.visible  {        
+    opacity: 1;
+    visibility: visible;
+}
+
 // Change Autocomplete styles in Chrome
 input:-internal-autofill-selected,
 input:-webkit-autofill,

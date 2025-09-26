@@ -435,23 +435,28 @@
       <h2>Contact</h2>
     </header>
 
-    <form action="https://formspree.io/f/mbjplpaj" class="contact-form" method="POST">
+    <form action="https://formspree.io/f/mbjplpaj" class="contact-form" method="POST" target="_blank"
+      rel="external nofollow noreferrer" id="contact-form">
       <div class="contact-form-section">
         <label for="name">Your name</label>
-        <input type="text" name="name" id="name" minlength="2" placeholder="Nick Cave">
+        <input class="data-input" type="text" name="name" id="name" minlength="2" placeholder="Nick Cave">
       </div>
       <div class="contact-form-section">
         <label for="email">Your email</label>
-        <input type="email" name="email" id="email" placeholder="nick@nickcave.com">
+        <input class="data-input" type="email" name="email" id="email" placeholder="nick@nickcave.com">
       </div>
       <div class="contact-form-section">
         <label for="message">Leave a message</label>
-        <textarea name="message" id="message" rows="5" placeholder="Here goes your message." required></textarea>
+        <textarea class="data-input" name="message" id="message" rows="5" placeholder="Here goes your message."
+          required></textarea>
       </div>
       <div class="contact-form-section">
         <button type="submit">Send</button>
       </div>
     </form>
+
+    <p id="form-feedback-message" class="hidden" aria-label="Form feedback message" role="region" aria-live="polite">
+    </p>
 
     <hr class="divider">
 

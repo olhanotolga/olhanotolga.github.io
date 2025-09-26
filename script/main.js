@@ -67,3 +67,32 @@ projectCards.forEach((card, index) => {
     handleProjectCardsNavigation(event, index)
   );
 });
+
+/*
+Logic to execute upon submitting the contact form
+*/
+
+const form = document.getElementById('contact-form');
+const successMessage = document.getElementById('form-feedback-message');
+
+function handleSubmitForm(event) {
+  setTimeout(() => {
+    form.reset();
+    successMessage.className = 'visible';
+    successMessage.innerText = 'Your message has been sent!';
+  }, 500);
+}
+
+form.addEventListener('submit', handleSubmitForm);
+
+// if the form has been submitted, hide the success message
+function handleHideSuccessMessage(event) {
+  if (successMessage.className === 'visible') {
+    successMessage.className = 'hidden';
+    successMessage.innerText = '';
+  }
+}
+
+form.querySelectorAll('.data-input').forEach((el) => {
+  el.addEventListener('keydown', handleHideSuccessMessage);
+});
