@@ -1,0 +1,55 @@
+@use "mixins_placeholders";
+@use "variables";
+
+#about-page {
+	.section-header {
+		@include mixins_placeholders.headers(variables.$accent-color--about, variables.$accent-color--about-shadow);
+	}
+}
+
+.about-info {
+	margin: 0 auto;
+	padding: 0 variables.$spacing-medium-x;
+	position: relative;
+	display: grid;
+	grid-template: auto / 7ch auto; // on mobile
+
+	&-date {
+    color: variables.$support-color;
+		font-weight: 700;
+    padding: variables.$spacing-normal 0;
+	}
+	&-paragraph, &-intro {
+		grid-column: 3 / span 1;
+		padding: variables.$spacing-normal variables.$spacing-medium-x;
+	}
+  &-paragraph::before {
+    @extend %before-styles;
+    width: variables.$spacing-medium;
+    height: variables.$spacing-medium;
+    background-color: variables.$accent-color--contact;
+    border-radius: variables.$border-radius-circle;
+    left: calc(7ch + 2.5rem); // on mobile
+  }
+
+	&::before {
+		@extend %before-styles;
+		width: variables.$spacing-normal;
+		height: 100%;
+		background-color: variables.$accent-color--projects;
+		grid-area: 2 / 2 / auto / span 1;
+	}
+}
+
+// media query for tablets and desktop devices
+
+@media screen and (min-width: 600px) {
+	.about-info {
+		max-width: calc(90vw - #{variables.$spacing-medium});
+		grid-template: auto / 13ch auto;
+
+		&-paragraph::before {
+			left: calc(11ch + 4.65rem);
+		}
+	}
+}

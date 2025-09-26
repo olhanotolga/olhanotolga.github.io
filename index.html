@@ -1,351 +1,485 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<meta name="author" content="Olha Halat">
-	<meta name="description" content="This is my portfolio page where I showcase my web development projects and demonstrate a little bit of my professional self.">
-	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-	<title>Olha's Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- OPEN GRAPH METADATA -->
-	<meta property="og:title" content="Olha's Portfolio" />
-	<meta property="og:description" content="This is my portfolio page where I showcase my web development projects and demonstrate a little bit of my professional self.">
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://olhanotolga.github.io/" />
-	<meta property="og:image" content="https://raw.githubusercontent.com/olhanotolga/olhanotolga.github.io/master/images/screenshots/portfolio-rectangle.png" />
+  <meta name="author" content="Olha Halat">
+  <meta name="description"
+    content="This is my portfolio page where I showcase my web development projects and demonstrate a little bit of my professional self.">
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <title>Olha's Portfolio</title>
 
-	<!-- TWITTER CARD METADATA -->
-	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:title" content="Olha's Portfolio" />
-	<meta name="twitter:description" content="This is my portfolio page where I showcase my web development projects and demonstrate a little bit of my professional self." />
-	<meta name="twitter:image" content="https://raw.githubusercontent.com/olhanotolga/olhanotolga.github.io/master/images/screenshots/portfolio-square.png" />
+  <!-- OPEN GRAPH METADATA -->
+  <meta property="og:title" content="Olha's Portfolio" />
+  <meta property="og:description"
+    content="This is my portfolio page where I showcase my web development projects and demonstrate a little bit of my professional self.">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://olhanotolga.github.io/" />
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/olhanotolga/olhanotolga.github.io/master/images/screenshots/portfolio-rectangle.png" />
 
-    <link rel="stylesheet" href="./css/main.css">
+  <!-- TWITTER CARD METADATA -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Olha's Portfolio" />
+  <meta name="twitter:description"
+    content="This is my portfolio page where I showcase my web development projects and demonstrate a little bit of my professional self." />
+  <meta name="twitter:image"
+    content="https://raw.githubusercontent.com/olhanotolga/olhanotolga.github.io/master/images/screenshots/portfolio-square.png" />
+
+  <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
-    <section class="page" id="homepage">
-		<header class="homepage-section letters">
-			<!-- H1 contains the same information as the decorative letters below. -->
-			<h1 class="visually-hidden">OLHA</h1>
+  <section class="page" id="homepage">
+    <header class="homepage-section letters">
+      <!-- H1 contains the same information as the decorative letters below. -->
+      <h1 class="visually-hidden">OLHA</h1>
 
-			<span class="homepage-letter o" aria-hidden="true">O</span>
-			<span class="homepage-letter l" aria-hidden="true">L</span>
-			<span class="homepage-letter h" aria-hidden="true">H</span>
-			<span class="homepage-letter a" aria-hidden="true">A</span>
-		</header>
+      <span class="homepage-letter o" aria-hidden="true">O</span>
+      <span class="homepage-letter l" aria-hidden="true">L</span>
+      <span class="homepage-letter h" aria-hidden="true">H</span>
+      <span class="homepage-letter a" aria-hidden="true">A</span>
+    </header>
 
-		<nav class="homepage-section icons">
-			<ul class="nav-icons">
-				<li class="icon-container">
-					<a href="#about-page">
-						<img class="about-img" src="./images/about.png" alt="">
-						<span class="section-nav-title">About</span>
-					</a>
-				</li>
-				<li class="icon-container">
-					<a href="#skills-page">
-						<img class="skills-img" src="./images/skills.png" alt="">
-						<span class="section-nav-title">Skills</span>
-					</a>
-				</li>
-				<li class="icon-container">
-					<a href="#projects-page">
-						<img class="projects-img" src="./images/projects.png" alt="">
-						<span class="section-nav-title">Projects</span>
-					</a>
-				</li>
-				<li class="icon-container">
-					<a href="#contact-page">
-						<img class="contact-img" src="./images/contact.png" alt="">
-						<span class="section-nav-title">Contact</span>
-					</a>
-				</li>
-			</ul>
-		</nav>
-	</section>
+    <nav class="homepage-section icons">
+      <ul class="nav-icons">
+        <li class="icon-container">
+          <a href="#about-page">
+            <img class="about-img" src="./images/about.png" alt="">
+            <span class="section-nav-title">About</span>
+          </a>
+        </li>
+        <li class="icon-container">
+          <a href="#skills-page">
+            <img class="skills-img" src="./images/skills.png" alt="">
+            <span class="section-nav-title">Skills</span>
+          </a>
+        </li>
+        <li class="icon-container">
+          <a href="#projects-page">
+            <img class="projects-img" src="./images/projects.png" alt="">
+            <span class="section-nav-title">Projects</span>
+          </a>
+        </li>
+        <li class="icon-container">
+          <a href="#contact-page">
+            <img class="contact-img" src="./images/contact.png" alt="">
+            <span class="section-nav-title">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </section>
 
-	<!-- sticky up arrow -->
-	<a id="up" href="#homepage">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-			<path class="arrow" d="M68.9,191c-8.27,0-14-1.34-17.46-4.09s-5.28-7.06-5.28-12.73l0-85.85c-12.62-.09-25.43-.23-38.1-.4a9.46,9.46,0,0,1-5.87-1.56A5.29,5.29,0,0,1,0,82a8,8,0,0,1,2.32-5.42l56.28-66C62,6.54,65,3.76,67.66,2.27S74.56,0,80.46,0h19.94c5.9,0,10.09.74,12.81,2.27s5.68,4.26,9.06,8.25l56.3,66a8,8,0,0,1,2.3,5.4,5.28,5.28,0,0,1-2.17,4.41,9.37,9.37,0,0,1-5.86,1.55c-12.48.17-25.17.31-37.72.41,0,0,0,70.86,0,85.85,0,5.66-1.78,9.94-5.28,12.73S120.53,191,112,191Z"/>
-		</svg>
-		<span class="visually-hidden">Back to top</span>
-	</a>
+  <!-- sticky up arrow -->
+  <a id="up" href="#homepage">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+      <path class="arrow"
+        d="M68.9,191c-8.27,0-14-1.34-17.46-4.09s-5.28-7.06-5.28-12.73l0-85.85c-12.62-.09-25.43-.23-38.1-.4a9.46,9.46,0,0,1-5.87-1.56A5.29,5.29,0,0,1,0,82a8,8,0,0,1,2.32-5.42l56.28-66C62,6.54,65,3.76,67.66,2.27S74.56,0,80.46,0h19.94c5.9,0,10.09.74,12.81,2.27s5.68,4.26,9.06,8.25l56.3,66a8,8,0,0,1,2.3,5.4,5.28,5.28,0,0,1-2.17,4.41,9.37,9.37,0,0,1-5.86,1.55c-12.48.17-25.17.31-37.72.41,0,0,0,70.86,0,85.85,0,5.66-1.78,9.94-5.28,12.73S120.53,191,112,191Z" />
+    </svg>
+    <span class="visually-hidden">Back to top</span>
+  </a>
 
-	<section class="page" id="about-page">
-		<header class="section-header">
-			<h2>About</h2>
-		</header>
-		<section class="about-info">
-			<p class="about-info-intro">My name is Olha, and I am a Web Developer.</p>
+  <section class="page" id="about-page">
+    <header class="section-header">
+      <h2>About</h2>
+    </header>
+    <dl class="about-info">
+      <dd class="about-info-intro">My name is Olha <span lang="uk">(Ольга)</span>, and I am a Software Engineer.</dd>
 
-			<p class="about-info-date">2003&nbsp;– 2010</p>
-			<p class="about-info-paragraph">I've studied social sciences at Kyiv-Mohyla Academy&mdash;a unique and old university in Kyiv, Ukraine&mdash;and group psychoanalysis afterwards.</p>
-			
-			<p class="about-info-date">2011</p>
-			<p class="about-info-paragraph">And yet, I chose to work with the language and media and joined the tech field as a content writer / marketing copywriter.</p>
-			
-			<p class="about-info-date">2016&nbsp;– 2019</p>
-			<p class="about-info-paragraph">Fast-forward 5 years: I landed in Berlin and continued doing what I did in Ukraine. Until I felt the need for a relaunch.</p>
-			
-			<p class="about-info-date">2020&nbsp;– &nbsp;...</p>
-			<p class="about-info-paragraph">Currently, I'm learning to mark up, style, and code websites and web apps. I'm also a proud student at FrauenLoop (the first cohort of this decade!) and DCI Berlin.</p>
-			
-			<p class="about-info-date">now</p>
-			<p class="about-info-paragraph">In my spare time, I translate and subtitle films, enjoy city walks, hike in the nature, or pick mushrooms. Mountains and now coding are my most favorite things in the world.</p>
-		</section>
+      <dt class="about-info-date">2003&nbsp;– 2010</dt>
+      <dd class="about-info-paragraph">I've studied social sciences at Kyiv-Mohyla Academy&mdash;a unique and old
+        university in Kyiv, Ukraine&mdash;and group psychoanalysis afterwards.</dd>
 
-	</section>
+      <dt class="about-info-date">2011</dt>
+      <dd class="about-info-paragraph">And yet, I chose to work with the language and media and joined the tech field as
+        a content writer / marketing copywriter. One of my favorite things was to translate and subtitle films.</dd>
 
-	<section class="page" id="skills-page">
-		<header class="section-header">
-			<h2>Skills</h2>
-		</header>
-		<section class="web-dev">
-			<h3>Web Development</h3>
-			<div class="web-dev-skills">
-				<div class="web-dev-skill mat-ui" title="Material UI">
-					<img class="web-dev-skill-icon" src="./images/material-ui.png" alt="Material UI">
-				</div>
-				<div class="web-dev-skill html" title="HTML">
-					<img class="web-dev-skill-icon" src="./images/html.png" alt="HTML">
-				</div>
-				<div class="web-dev-skill css" title="CSS">
-					<img class="web-dev-skill-icon" src="./images/css.png" alt="CSS">
-				</div>
-				<div class="web-dev-skill bootstrap" title="Bootstrap">
-					<img class="web-dev-skill-icon" src="./images/bootstrap.png" alt="Bootstrap">
-				</div>
-				<div class="web-dev-skill sass" title="Sass/SCSS">
-					<img class="web-dev-skill-icon" src="./images/sass.png" alt="Sass">
-				</div>
-				<div class="web-dev-skill javascript" title="JavaScript">
-					<img class="web-dev-skill-icon" src="./images/javascript.png" alt="JavaScript">
-				</div>
-				<div class="web-dev-skill jquery" title="jQuery">
-					<img class="web-dev-skill-icon" src="./images/jquery.png" alt="jQuery">
-				</div>
-				<div class="web-dev-skill react" title="React">
-					<img class="web-dev-skill-icon" src="./images/react.png" alt="React">
-				</div>
-				<div class="web-dev-skill python" title="Python">
-					<img class="web-dev-skill-icon" src="./images/python.png" alt="Python">
-				</div>
-				<div class="web-dev-skill flask" title="Flask">
-					<img class="web-dev-skill-icon" src="./images/flask-logo.png" alt="Flask">
-				</div>
-				<div class="web-dev-skill git" title="Git">
-					<img class="web-dev-skill-icon" src="./images/git.png" alt="Git">
-				</div>
-				<div class="web-dev-skill github" title="GitHub">
-					<img class="web-dev-skill-icon" src="./images/github.png" alt="GitHub">
-				</div>
-				<div class="web-dev-skill cli" title="Command-line tools">
-					<img class="web-dev-skill-icon" src="./images/cli.png" alt="CLI (Bash)">
-				</div>
-			</div>
-		</section>
-		<section class="other">
-			<h3>Miscellaneous</h3>
-			<div class="other-skills">
-				<div class="other-skill" title="Writing">
-					<img class="other-skill-icon" src="./images/writing.png" alt="writing">
-				</div>
-				<div class="other-skill" title="Translation, Subtitling, Localization">
-					<img class="other-skill-icon" src="./images/translation.png" alt="translation, subtitling, and localization">
-				</div>
-				<div class="other-skill" title="SEO">
-					<img class="other-skill-icon" src="./images/seo.png" alt="SEO">
-				</div>
-				<div class="other-skill" title="Research">
-					<img class="other-skill-icon" src="./images/research.png" alt="research">
-				</div>
-			</div>
-		</section>
-	</section>
+      <dt class="about-info-date">2016&nbsp;– 2019</dt>
+      <dd class="about-info-paragraph">Fast-forward 5 years: I landed in Berlin and continued doing what I did in
+        Ukraine. Until I felt the need for a relaunch.</dd>
 
-	<section class="page" id="projects-page">
-		<header class="section-header">
-			<h2>Projects</h2>
-		</header>
-		<ul class="projects">
+      <dt class="about-info-date">2020&nbsp;–&nbsp;2021</dt>
+      <dd class="about-info-paragraph">Learned to build websites and web apps as a FrauenLoop and DCI student.<br />My
+        two
+        main takeaways:
+        <ol>
+          <li>to learn something, one needs to spend plenty of (extra) time practicing;</li>
+          <li>pair programming is the most frightening and also the most awesome learning practice.</li>
+        </ol>
+      </dd>
 
-			<li class="projects-card projects-three">
-				<img src="./images/screenshots/buybyebuy.png" alt="BuyByeBuy — a web shop simulator: screenshot" class="projects-card__screenshot">
-				<div class="projects-card__text">
-					<p class="projects-card__description">A webshop simulator made with React + Styled Components. The data comes from a Google spreadsheet which I'm using as a JSON endpoint.</p>
-					<a href="https://buybyebuy.vercel.app/" target="_blank" rel="noopener noreferrer" class="projects-card__links-live">live</a>
-					<a href="https://github.com/olhanotolga/buybyebuy" class="projects-card__links-repo">repo</a>
-				</div>
-				<div class="projects-card__info">
-					<h3>BuyByeBuy</h3>
-					<small><span>React</span> <span>Styled Components</span> <span>React Router</span></small>
-				</div>
-			</li>
+      <dt class="about-info-date">July 2021</dt>
+      <dd class="about-info-paragraph">Joined Yara as Associate Software Engineer.<br />I was lucky to be part of a
+        talented
+        cross-discipline
+        team, where we built and maintained AtFarm, a farm and field management tool.<br />Here, I utilized and extended
+        my
+        knowledge of
+        React, learned TypeScript, created UIs, worked with GraphQL API integration, MapBox GL JS, made first encounters
+        with (and
+        tweaks to) the NestJS backend microservice.</dd>
 
-			<li class="projects-card projects-one">
-				<img src="./images/screenshots/molodist-subtitlers-home-hover.png" alt="a knowledge base for film subtitlers: screenshot" class="projects-card__screenshot">
-				<div class="projects-card__text">
-					<p class="projects-card__description">A knowledge base for film translators and subtitlers of the Molodist film festival, for which I used to subtitle films myself.
-					</p>
-					<a href="https://olhanotolga.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="projects-card__links-live">live
-					</a>
-					<a href="https://github.com/olhanotolga/molodist-subtitlers" class="projects-card__links-repo">repo</a>
-				</div>
-				<div class="projects-card__info">
-					<h3>Molodist Subtitlers</h3>
-					<small><span>Flask</span> <span>HTML</span> <span>CSS</span> <span>Bootstrap</span> <span>JS (RegExp)</span></small>
-				</div>
-			</li>
+      <dt class="about-info-date">2023&nbsp;–&nbsp;2025</dt>
+      <dd class="about-info-paragraph">Promoted to (Middle) Software Engineer at Yara.<br />Changed several teams and
+        projects. With my focus still mostly on Frontend, I had a
+        chance to do other cool stuff: manage deployment pipelines (in a microfrontends app suite), work closely with
+        the DevOps engineers on
+        workflows migration from CircleCI to GitHub Actions, build and extend RESTful API in NestJS microservices,
+        integrate and document Kafka events, etc.</dd>
 
-			<li class="projects-card projects-four">
-				<img src="./images/screenshots/erldgt-dark-desktop-btn.png"
-					alt="erldgt: the to-do app"
-					class="projects-card__screenshot">
-				<div class="projects-card__text">
-					<p class="projects-card__description">A to-do app built with React and Material UI. Allows adding, removing, dragging, and marking tasks as accomplished (German: "erledigt").
-					</p>
-					<a href="https://olhanotolga.github.io/erldgt-dream-todo/" target="_blank" rel="noopener noreferrer" class="projects-card__links-live">live
-					</a>
-					<a href="https://github.com/olhanotolga/erldgt-dream-todo" class="projects-card__links-repo">repo</a>
-				</div>
-				<div class="projects-card__info">
-					<h3>erldgt: the to-do app</h3>
-					<small><span>React</span> <span>Material UI</span> <span>CSS</span></small>
-				</div>
-			</li>
+      <dt class="about-info-date">now</dt>
+      <dd class="about-info-paragraph">In my spare time, I enjoy city walks and hikes in the nature. Mountains and
+        building things are my most favorite things in the world.</dd>
+    </dl>
 
-			<li class="projects-card projects-five">
-				<img src="./images/screenshots/portfolio-one.png"
-				alt="my first portfolio: screenshot"
-				class="projects-card__screenshot">
-				<div class="projects-card__text">
-					<p class="projects-card__description">My very first portfolio where I initially practiced HTML and CSS. I used a Bootstrap accordion because it both fit the idea and looked like a challenge.</p>
-					<a href="https://olhanotolga.github.io/portfolio/ "target="_blank" rel="noopener noreferrer" class="projects-card__links-live">live</a>
-					<a href="https://github.com/olhanotolga/portfolio" class="projects-card__links-repo">repo</a>
-				</div>
-				<div class="projects-card__info">
-					<h3>Old Portfolio</h3>
-					<small>
-						<span>HTML</span> <span>CSS</span> <span>Bootstrap</span>
-					</small>
-				</div>
-			</li>
+  </section>
 
-			<li class="projects-card projects-three">
-				<img src="./images/screenshots/calculator-divide-zero.png" alt="JS calculator after dividing by zero: screenshot" class="projects-card__screenshot">
-				<div class="projects-card__text">
-					<p class="projects-card__description">A vanilla JavaScript calculator. It was a good exercise which, in particular, taught me a lot about data types and type coercion.</p>
-					<a href="https://olhanotolga.github.io/js-calculator/" target="_blank" rel="noopener noreferrer" class="projects-card__links-live">live</a>
-					<a href="https://github.com/olhanotolga/js-calculator" class="projects-card__links-repo">repo</a>
-				</div>
-				<div class="projects-card__info">
-					<h3>JS Calculator</h3>
-					<small><span>JavaScript</span> <span>HTML</span> <span>CSS</span></small>
-				</div>
-			</li>
+  <section class="page" id="skills-page">
+    <header class="section-header">
+      <h2>Skills</h2>
+    </header>
+    <section class="web-dev">
+      <h3>Tech Skills</h3>
+      <div class="web-dev-skills">
+        <div class="web-dev-skill ts" title="TypeScript">
+          <img class="web-dev-skill-icon" src="./images/ts-logo.png" alt="TypeScript">
+        </div>
+        <div class="web-dev-skill styled-components" title="Styled Components">
+          <img class="web-dev-skill-icon" src="./images/styled-components.png" alt="Styled Components">
+        </div>
+        <div class="web-dev-skill node-js" title="Node.js">
+          <img class="web-dev-skill-icon" src="./images/node-js.png" alt="Node.js">
+        </div>
+        <div class="web-dev-skill nest-js" title="NestJS">
+          <img class="web-dev-skill-icon" src="./images/nest-js.png" alt="NestJS">
+        </div>
+        <div class="web-dev-skill postgresql" title="PostgreSQL">
+          <img class="web-dev-skill-icon" src="./images/postgresql.png" alt="PostgreSQL">
+        </div>
+        <div class="web-dev-skill docker" title="Docker">
+          <img class="web-dev-skill-icon" src="./images/docker.png" alt="Docker">
+        </div>
+        <div class="web-dev-skill express" title="Express">
+          <img class="web-dev-skill-icon" src="./images/express.png" alt="Express">
+        </div>
+        <div class="web-dev-skill react-router" title="React Router">
+          <img class="web-dev-skill-icon" src="./images/react-router.png" alt="React Router">
+        </div>
+        <div class="web-dev-skill webpack" title="Webpack">
+          <img class="web-dev-skill-icon" src="./images/webpack.png" alt="Webpack">
+        </div>
+        <div class="web-dev-skill mongodb" title="MongoDB">
+          <img class="web-dev-skill-icon" src="./images/mongodb.png" alt="MongoDB">
+        </div>
+        <div class="web-dev-skill html" title="HTML">
+          <img class="web-dev-skill-icon" src="./images/html.png" alt="HTML">
+        </div>
+        <div class="web-dev-skill css" title="CSS">
+          <img class="web-dev-skill-icon" src="./images/css.png" alt="CSS">
+        </div>
+        <div class="web-dev-skill sass" title="Sass/SCSS">
+          <img class="web-dev-skill-icon" src="./images/sass.png" alt="Sass">
+        </div>
+        <div class="web-dev-skill javascript" title="JavaScript">
+          <img class="web-dev-skill-icon" src="./images/javascript.png" alt="JavaScript">
+        </div>
+        <div class="web-dev-skill react" title="React">
+          <img class="web-dev-skill-icon" src="./images/react.png" alt="React">
+        </div>
+        <div class="web-dev-skill python" title="Python">
+          <img class="web-dev-skill-icon" src="./images/python.png" alt="Python">
+        </div>
+        <div class="web-dev-skill flask" title="Flask">
+          <img class="web-dev-skill-icon" src="./images/flask-logo.png" alt="Flask">
+        </div>
+        <div class="web-dev-skill git" title="Git">
+          <img class="web-dev-skill-icon" src="./images/git.png" alt="Git">
+        </div>
+        <div class="web-dev-skill github" title="GitHub">
+          <img class="web-dev-skill-icon" src="./images/github.png" alt="GitHub">
+        </div>
+        <div class="web-dev-skill cli" title="Command-line tools">
+          <img class="web-dev-skill-icon" src="./images/cli.png" alt="CLI (Bash)">
+        </div>
+      </div>
+    </section>
+    <section class="other">
+      <h3>Miscellaneous</h3>
+      <div class="other-skills">
+        <div class="other-skill" title="Writing">
+          <img class="other-skill-icon" src="./images/writing.png" alt="writing">
+        </div>
+        <div class="other-skill" title="Translation, Subtitling, Localization">
+          <img class="other-skill-icon" src="./images/translation.png" alt="translation, subtitling, and localization">
+        </div>
+        <div class="other-skill" title="Collaboration">
+          <img class="other-skill-icon" src="./images/collaboration.png" alt="Collaboration">
+        </div>
+        <div class="other-skill" title="Research">
+          <img class="other-skill-icon" src="./images/research.png" alt="research">
+        </div>
+      </div>
+    </section>
+  </section>
 
-			<li class="projects-card projects-two">
-				<img src="./images/screenshots/js-algorithms-caesars-cipher.png" alt="JS Algorithms projects — Caesar's Cipher: screenshot" class="projects-card__screenshot">
-				<div class="projects-card__text">
-					<p class="projects-card__description">Visualization of the 5 final projects of the "JS Algorithms and Data Structures" certification at freeCodeCamp.</p>
-					<a href="https://olhanotolga.github.io/freeCodeCamp-projects/" target="_blank" rel="noopener noreferrer" class="projects-card__links-live">live</a>
-					<a href="https://github.com/olhanotolga/freeCodeCamp-projects" class="projects-card__links-repo">repo</a>
-				</div>
-				<div class="projects-card__info">
-					<h3>JS Algorithms</h3>
-					<small><span>JavaScript</span> <span>HTML</span> <span>CSS</span></small>
-				</div>
-			</li>
+  <section class="page" id="projects-page">
+    <header class="section-header">
+      <h2 id="projects">Projects</h2>
+    </header>
+    <section aria-labelledby="projects" role="grid">
+      <p class="projects-nav-hint">
+        You can use <strong>arrow keys</strong> on your keyboard to move between project cards.<br />
+        Press <strong>Enter</strong> to expand more information and <strong>Escape</strong> to collapse. Focus the
+        link-buttons with <strong>Tab</strong>. Press
+        an <strong>arrow key</strong> to go to the next project.</p>
 
-			<li class="projects-card projects-four">
-				<img src="./images/screenshots/bruno-taut-top.png" alt="Bruno Taut tribute page" class="projects-card__screenshot">
-				<div class="projects-card__text">
-					<p class="projects-card__description">An info page with CSS art, a tribute to the architect Bruno Taut whose housing estates in Berlin are recognized as UNESCO World Heritage Sites.</p>
-					<a href="https://olhanotolga.github.io/bruno-taut/" target="_blank" rel="noopener noreferrer" class="projects-card__links-live">live</a>
-					<a href="https://github.com/olhanotolga/bruno-taut" class="projects-card__links-repo">repo</a>
-				</div>
-				<div class="projects-card__info">
-					<h3>Bruno Taut</h3>
-					<small><span>HTML</span> <span>CSS (SCSS)</span></small>
-				</div>
-			</li>
+      <ul class="projects" role="row">
+        <li class="projects-card projects-three" role="gridcell" tabindex="0" aria-expanded="false"
+          aria-controls="project-text-three">
+          <img src="./images/screenshots/buybyebuy.png" alt="BuyByeBuy — a web shop simulator: screenshot"
+            class="projects-card__screenshot">
+          <div class="projects-card__info">
+            <h3>BuyByeBuy</h3>
+            <small><span>React</span> <span>Styled Components</span> <span>React Router</span></small>
+          </div>
+          <div class="projects-card__text hidden" id="project-text-three">
+            <p class="projects-card__description">A webshop simulator made with React + Styled Components. The data
+              comes
+              from a Google spreadsheet which I'm using as a JSON endpoint.</p>
+            <a href="https://buybyebuy.vercel.app/" target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live</a>
+            <a href="https://github.com/olhanotolga/buybyebuy" class="projects-card__links-repo" target="_blank"
+              rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
 
-			<li class="projects-card projects-six">
-				<img src="./images/screenshots/rock-paper-scissors.png" alt="JRock, Paper, Scissors game: screenshot" class="projects-card__screenshot">
-				<div class="projects-card__text">
-					<p class="projects-card__description">A series of simple browser games built with HTML, CSS, and vanilla JS. Featuring: Rock, Paper, Scissors, Pixel Artboard, Guess the Color.</p>
-					<a href="https://olhanotolga.github.io/rock-paper-scissors/" target="_blank" rel="noopener noreferrer" class="projects-card__links-live">live</a>
-					<a href="https://github.com/olhanotolga/js-games" class="projects-card__links-repo">repo</a>
-				</div>
-				<div class="projects-card__info">
-					<h3>JS games</h3>
-					<small><span>JavaScript</span> <span>HTML</span> <span>CSS</span></small>
-				</div>
-			</li>
+        <li class="projects-card projects-one" role="gridcell" tabindex="-1" aria-expanded="false"
+          aria-controls="project-text-one">
+          <img src="./images/screenshots/molodist-subtitlers-home-hover.png"
+            alt="a knowledge base for film subtitlers: screenshot" class="projects-card__screenshot">
 
-			<li class="projects-card projects-five">
-				<img src="./images/screenshots/raptors-berlin-home.png" alt="Raptors of Berlin — a simple website: screenshot" class="projects-card__screenshot">
-				<div class="projects-card__text">
-					<p class="projects-card__description">My final project at the DCI intro course — a responsive HTML/CSS website dedicated to raptors that can be spotted in Berlin or around it.</p>
-					<a href="https://olhanotolga.github.io/raptors_of_berlin/" target="_blank" rel="noopener noreferrer" class="projects-card__links-live">live</a>
-					<a href="https://github.com/olhanotolga/raptors_of_berlin" class="projects-card__links-repo">repo</a>
-				</div>
-				<div class="projects-card__info">
-					<h3>Raptors of Berlin</h3>
-					<small><span>HTML</span> <span>CSS</span></small>
-				</div>
-			</li>
+          <div class="projects-card__info">
+            <h3>Molodist Subtitlers</h3>
+            <small><span>Flask</span> <span>HTML</span> <span>CSS</span> <span>Bootstrap</span> <span>JS
+                (RegExp)</span></small>
+          </div>
 
-		</ul>
-	</section>
+          <div class="projects-card__text hidden" id="project-text-one">
+            <p class="projects-card__description">A knowledge base for film translators and subtitlers of the Molodist
+              film festival, for which I used to subtitle films myself.
+            </p>
+            <a href="https://olhanotolga.pythonanywhere.com/" target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live
+            </a>
+            <a href="https://github.com/olhanotolga/molodist-subtitlers" class="projects-card__links-repo"
+              target="_blank" rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
 
-	<section class="page" id="contact-page">
-		<header class="section-header">
-			<h2>Contact</h2>
-		</header>
+        <li class="projects-card projects-four" role="gridcell" tabindex="-1" aria-expanded="false"
+          aria-controls="project-text-four">
+          <img src="./images/screenshots/erldgt-dark-desktop-btn.png" alt="erldgt: the to-do app"
+            class="projects-card__screenshot">
 
-		<form action="https://formspree.io/f/mbjplpaj" class="contact-form" method="POST">
-			<div class="contact-form-section">
-				<label for="name">Your name</label>
-				<input type="text" name="name" id="name" minlength="2" placeholder="Nick Cave">
-			</div>
-			<div class="contact-form-section">
-				<label for="email">Your email</label>
-				<input type="email" name="email" id="email" placeholder="nick@nickcave.com">
-			</div>
-			<div class="contact-form-section">
-				<label for="message">Leave a message</label>
-				<textarea name="message" id="message" rows="5" placeholder="Here goes your message." required></textarea>
-			</div>
-			<div class="contact-form-section">
-				<button type="submit">Send</button>
-			</div>
-		</form>
+          <div class="projects-card__info">
+            <h3>erldgt: the to-do app</h3>
+            <small><span>React</span> <span>Material UI</span> <span>CSS</span></small>
+          </div>
 
-		<hr class="divider">
+          <div class="projects-card__text hidden" id="project-text-four">
+            <p class="projects-card__description">A to-do app built with React and Material UI. Allows adding, removing,
+              dragging, and marking tasks as accomplished (German: "erledigt").
+            </p>
+            <a href="https://olhanotolga.github.io/erldgt-dream-todo/" target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live
+            </a>
+            <a href="https://github.com/olhanotolga/erldgt-dream-todo" class="projects-card__links-repo" target="_blank"
+              rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
 
-		<footer class="social-links">
-			<a href="https://github.com/olhanotolga" target="_blank" rel="noopener noreferrer">
-				<img src="./images/link-github.png" alt="Olha's GitHub profile" class="social-links-icon">
-			</a>
-			<a href="https://www.linkedin.com/in/olha-halat/" target="_blank" rel="noopener noreferrer">
-				<img src="./images/link-linkedin.png" alt="Olha's LinkedIn profile" class="social-links-icon">
-			</a>
-			<a href="https://medium.com/@olha.halat" target="_blank" rel="noopener noreferrer">
-				<img src="./images/link-medium-2020.png" alt="Olha's Medium profile" class="social-links-icon">
-			</a>
-			<a href="https://codepen.io/olhanotolga" target="_blank" rel="noopener noreferrer">
-				<img src="./images/link-codepen.png" alt="Olha's CodePen profile" class="social-links-icon">
-			</a>
-			<a href="https://www.freecodecamp.org/olhanotolga" target="_blank" rel="noopener noreferrer">
-				<img src="./images/link-freecodecamp.png" alt="Olha's freeCodeCamp profile" class="social-links-icon">
-			</a>
-		</footer>
-	</section>
+        <li class="projects-card projects-five" role="gridcell" tabindex="-1" aria-expanded="false"
+          aria-controls="project-text-five">
+          <img src="./images/screenshots/portfolio-one.png" alt="my first portfolio: screenshot"
+            class="projects-card__screenshot">
 
-	<script src="./script/main.js"></script>
+          <div class="projects-card__info">
+            <h3>Old Portfolio</h3>
+            <small>
+              <span>HTML</span> <span>CSS</span> <span>Bootstrap</span>
+            </small>
+          </div>
+
+          <div class="projects-card__text hidden" id="project-text-five">
+            <p class="projects-card__description">My very first portfolio where I initially practiced HTML and CSS. I
+              used
+              a Bootstrap accordion because it both fit the idea and looked like a challenge.</p>
+            <a href="https://olhanotolga.github.io/portfolio/ " target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live</a>
+            <a href="https://github.com/olhanotolga/portfolio" class="projects-card__links-repo" target="_blank"
+              rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
+
+        <li class="projects-card projects-three" role="gridcell" tabindex="-1" aria-expanded="false"
+          aria-controls="project-text-three">
+          <img src="./images/screenshots/calculator-divide-zero.png"
+            alt="JS calculator after dividing by zero: screenshot" class="projects-card__screenshot">
+
+          <div class="projects-card__info">
+            <h3>JS Calculator</h3>
+            <small><span>JavaScript</span> <span>HTML</span> <span>CSS</span></small>
+          </div>
+
+          <div class="projects-card__text hidden" aria-controls="project-text-three">
+            <p class="projects-card__description">A vanilla JavaScript calculator. It was a good exercise which, in
+              particular, taught me a lot about data types and type coercion.</p>
+            <a href="https://olhanotolga.github.io/js-calculator/" target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live</a>
+            <a href="https://github.com/olhanotolga/js-calculator" class="projects-card__links-repo" target="_blank"
+              rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
+
+        <li class="projects-card projects-two" role="gridcell" tabindex="-1" aria-expanded="false"
+          aria-controls="project-text-two">
+          <img src="./images/screenshots/js-algorithms-caesars-cipher.png"
+            alt="JS Algorithms projects — Caesar's Cipher: screenshot" class="projects-card__screenshot">
+
+          <div class="projects-card__info">
+            <h3>JS Algorithms</h3>
+            <small><span>JavaScript</span> <span>HTML</span> <span>CSS</span></small>
+          </div>
+
+          <div class="projects-card__text hidden" id="project-text-two">
+            <p class="projects-card__description">Visualization of the 5 final projects of the "JS Algorithms and Data
+              Structures" certification at freeCodeCamp.</p>
+            <a href="https://olhanotolga.github.io/freeCodeCamp-projects/" target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live</a>
+            <a href="https://github.com/olhanotolga/freeCodeCamp-projects" class="projects-card__links-repo"
+              target="_blank" rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
+
+        <li class="projects-card projects-four" role="gridcell" tabindex="-1" aria-expanded="false"
+          aria-controls="project-text-four">
+          <img src="./images/screenshots/bruno-taut-top.png" alt="Bruno Taut tribute page"
+            class="projects-card__screenshot">
+
+          <div class="projects-card__info">
+            <h3>Bruno Taut</h3>
+            <small><span>HTML</span> <span>CSS (SCSS)</span></small>
+          </div>
+
+          <div class="projects-card__text hidden" id="project-text-four">
+            <p class="projects-card__description">An info page with CSS art, a tribute to the architect Bruno Taut whose
+              housing estates in Berlin are recognized as UNESCO World Heritage Sites.</p>
+            <a href="https://olhanotolga.github.io/bruno-taut/" target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live</a>
+            <a href="https://github.com/olhanotolga/bruno-taut" class="projects-card__links-repo" target="_blank"
+              rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
+
+        <li class="projects-card projects-six" role="gridcell" tabindex="-1" aria-expanded="false"
+          aria-controls="project-text-six">
+          <img src="./images/screenshots/rock-paper-scissors.png" alt="JRock, Paper, Scissors game: screenshot"
+            class="projects-card__screenshot">
+
+          <div class="projects-card__info">
+            <h3>JS games</h3>
+            <small><span>JavaScript</span> <span>HTML</span> <span>CSS</span></small>
+          </div>
+
+          <div class="projects-card__text hidden" id="project-text-six">
+            <p class="projects-card__description">A series of simple browser games built with HTML, CSS, and vanilla JS.
+              Featuring: Rock, Paper, Scissors, Pixel Artboard, Guess the Color.</p>
+            <a href="https://olhanotolga.github.io/rock-paper-scissors/" target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live</a>
+            <a href="https://github.com/olhanotolga/js-games" class="projects-card__links-repo" target="_blank"
+              rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
+
+        <li class="projects-card projects-five" role="gridcell" tabindex="-1" aria-expanded="false"
+          aria-controls="project-text-five">
+          <img src="./images/screenshots/raptors-berlin-home.png" alt="Raptors of Berlin — a simple website: screenshot"
+            class="projects-card__screenshot">
+
+          <div class="projects-card__info">
+            <h3>Raptors of Berlin</h3>
+            <small><span>HTML</span> <span>CSS</span></small>
+          </div>
+
+          <div class="projects-card__text hidden" id="project-text-five">
+            <p class="projects-card__description">My final project at the DCI intro course — a responsive HTML/CSS
+              website
+              dedicated to raptors that can be spotted in Berlin or around it.</p>
+            <a href="https://olhanotolga.github.io/raptors_of_berlin/" target="_blank" rel="noopener noreferrer"
+              class="projects-card__links-live">live</a>
+            <a href="https://github.com/olhanotolga/raptors_of_berlin" class="projects-card__links-repo" target="_blank"
+              rel="noopener noreferrer">repo</a>
+          </div>
+        </li>
+
+      </ul>
+
+    </section>
+  </section>
+
+  <section class="page" id="contact-page">
+    <header class="section-header">
+      <h2>Contact</h2>
+    </header>
+
+    <form action="https://formspree.io/f/mbjplpaj" class="contact-form" method="POST" target="_blank"
+      rel="external nofollow noreferrer" id="contact-form">
+      <div class="contact-form-section">
+        <label for="name">Your name</label>
+        <input class="data-input" type="text" name="name" id="name" minlength="2" placeholder="Nick Cave">
+      </div>
+      <div class="contact-form-section">
+        <label for="email">Your email</label>
+        <input class="data-input" type="email" name="email" id="email" placeholder="nick@nickcave.com">
+      </div>
+      <div class="contact-form-section">
+        <label for="message">Leave a message</label>
+        <textarea class="data-input" name="message" id="message" rows="5" placeholder="Here goes your message."
+          required></textarea>
+      </div>
+      <div class="contact-form-section">
+        <button type="submit">Send</button>
+      </div>
+    </form>
+
+    <p id="form-feedback-message" class="hidden" aria-label="Form feedback message" role="region" aria-live="polite">
+    </p>
+
+    <hr class="divider">
+
+    <footer class="social-links">
+      <a href="https://github.com/olhanotolga" target="_blank" rel="noopener noreferrer">
+        <img src="./images/link-github.png" alt="Olha's GitHub profile" class="social-links-icon">
+      </a>
+      <a href="https://www.linkedin.com/in/olha-halat/" target="_blank" rel="noopener noreferrer">
+        <img src="./images/link-linkedin.png" alt="Olha's LinkedIn profile" class="social-links-icon">
+      </a>
+      <a href="https://medium.com/@olha.halat" target="_blank" rel="noopener noreferrer">
+        <img src="./images/link-medium-2020.png" alt="Olha's Medium profile" class="social-links-icon">
+      </a>
+      <a href="https://codepen.io/olhanotolga" target="_blank" rel="noopener noreferrer">
+        <img src="./images/link-codepen.png" alt="Olha's CodePen profile" class="social-links-icon">
+      </a>
+      <a href="https://www.freecodecamp.org/olhanotolga" target="_blank" rel="noopener noreferrer">
+        <img src="./images/link-freecodecamp.png" alt="Olha's freeCodeCamp profile" class="social-links-icon">
+      </a>
+    </footer>
+  </section>
+
+  <script src="./script/main.js"></script>
 </body>
+
 </html>

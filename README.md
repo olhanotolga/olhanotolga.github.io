@@ -13,7 +13,7 @@ Instead of a logo or image, I decided to combine the letters of my name with col
 
 ## Stack
 
-HTML, CSS (Sass/Scss).
+HTML, CSS (Sass/Scss), GitHub Actions.
 
 ## Development
 
@@ -27,4 +27,6 @@ I also aim to make my website accessible for everyone with the help of semantic 
 
 ## Deployment
 
-The website is live at [olhanotolga.github.io](olhanotolga.github.io) with some help compiling Sass into CSS from Jekyll (see the `jekyll` branch).
+To compile Sass to CSS and publish the static assets to GitHub Pages, I set up a custom workflow (see the `.github` folder). The website is live at [olhanotolga.github.io](olhanotolga.github.io).
+
+Previously I was accomplishing the same via Jekyll (see the legacy branch `jekyll`).
