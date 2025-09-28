@@ -24,10 +24,9 @@
 .web-dev {
 
 	&-skills {
-		height: calc(90vw - #{variables.$spacing-medium});
 		padding: variables.$spacing-medium;
 		display: grid;
-		grid-template: repeat(5, minmax(80px, 1fr)) /repeat(5, minmax(80px, 1fr));
+		grid-template: repeat(5, minmax(50px, 1fr)) /repeat(5, minmax(50px, 1fr));
 		align-items: center;
 		justify-items: center;
 		gap: variables.$spacing-small;

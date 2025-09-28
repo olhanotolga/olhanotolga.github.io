@@ -12,6 +12,7 @@
 	padding: 0 variables.$spacing-medium-x;
 	position: relative;
 	display: grid;
+  row-gap: variables.$spacing-small-x;
 	grid-template: auto / 7ch auto; // on mobile
 
 	&-date {
@@ -19,9 +20,27 @@
 		font-weight: 700;
     padding: variables.$spacing-normal 0;
 	}
-	&-paragraph, &-intro {
-		grid-column: 3 / span 1;
-		padding: variables.$spacing-normal variables.$spacing-medium-x;
+	&-paragraph {
+    grid-column: 3 / span 1;
+    padding: variables.$spacing-normal variables.$spacing-medium-x;
+
+    hr {
+      padding-block-end: variables.$spacing-small;
+      border: none;
+    }
+
+    ol, ul {
+      padding-inline-start: 1.7rem;
+      list-style-type: inherit;
+
+      li::marker {
+        color: variables.$outline-color;
+      }
+    }
+	}
+	&-intro {
+    grid-column: 3 / span 1;
+    padding-block: variables.$spacing-normal variables.$spacing-medium;
 	}
   &-paragraph::before {
     @extend %before-styles;
