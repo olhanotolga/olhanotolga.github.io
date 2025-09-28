@@ -21,6 +21,7 @@ section.page {
 	overflow-x: hidden;
 	padding-bottom: 3rem;
 	display: grid;
+  grid-template-rows: max-content;
 }
 
 .section-header {
