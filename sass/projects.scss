@@ -23,7 +23,7 @@
 	margin: 0 auto variables.$spacing-medium;
 	padding: variables.$spacing-medium;
 	display: grid;
-	grid-template-columns: repeat(5, 80vw);
+	grid-template-columns: repeat(5, 75vw);
 	overflow-x: scroll;
 	gap: variables.$spacing-large variables.$spacing-medium;
 	align-items: center;
